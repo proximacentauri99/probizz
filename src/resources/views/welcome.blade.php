@@ -25,7 +25,7 @@
                   <img class="covid-image" src="{{ asset('img/working.png')}}">
                   <h2>Probizz</h2>
                   <h3>Survey Maturity Level</h3>
-                  <p>A clinical assessment multi-step form that will assist individuals on deciding when to seek testing or medical care if they suspect they or someone they know has contracted COVID-19 or has come into close contact with someone who has COVID-19</p>
+                  <p>Sebuah platform untuk menentukan maturity level sebuah badan, lembaga atau perusahaan yang menekankan pada output stakeholder masing-masing</p>
               </div>
           </div>
           <!-- FORMS -->
@@ -37,10 +37,92 @@
                   <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate="">
                       <div id="steps-container">
                           <div class="step">
-                              <h4>Nama</h4>
+                              <h4>Data Diri</h4>
                               <div class="ps-0 q-box">
                                   <div class="q-box__question">
-                                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="masukkan nama anda">
+                                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama anda..">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="step">
+                              <h4>Data perusahaan</h4>
+                              <div class="ps-0 q-box">
+                                  <div class="q-box__question">
+                                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama perusahaan..">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="step">
+                              <h4>Data Stakeholder</h4>
+                              <div class="ps-0 q-box">
+                                  <div class="q-box__question">
+                                       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Stakeholder tujuan..">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="step">
+                              <h4>Beritahu kami tentang proses bisnis yang sedang anda pikirkan untuk perusahaan anda saat ini </h4>
+                              <div class="form-check ps-0 q-box">
+                                <!-- Example split danger button -->
+                                <div class="row">
+                                <div class="col-md-3"><div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Finansial
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Penyediaan return yang optimal</a>
+                                        <a class="dropdown-item" href="#">Manajemen resiko bisnis</a>
+                                        <a class="dropdown-item" href="#">Meningkatkan Transparansi</a>
+                                    </div>
+                                    </div></div>
+                                    <div class="col-md-3"><div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Customer
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Meningkatkan orientasi pelanggan</a>
+                                        <a class="dropdown-item" href="#">Menawarkan produk kompetitif </a>
+                                        <a class="dropdown-item" href="#">Menetapkan pelayanan berkelanjutan</a>
+                                        <a class="dropdown-item" href="#">Meningkatkan ketangkasan respon </a>
+                                        <a class="dropdown-item" href="#">Memperoleh optimasi harga</a>
+                                        <a class="dropdown-item" href="#">Mendapatkan informasi yang tepat</a>
+                                    </div>
+                                    </div></div>
+                                    <div class="col-md-3"><div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Internal
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Memelihara proses bisnis</a>
+                                        <a class="dropdown-item" href="#">Mengurangi biaya proses</a>
+                                        <a class="dropdown-item" href="#">Menetapkan peraturan</a>
+                                        <a class="dropdown-item" href="#">Menetapkan kebijakan internal</a>
+                                        <a class="dropdown-item" href="#">Mengatur perubahan bisnis</a>
+                                        <a class="dropdown-item" href="#">Memelihara operasional</a>
+                                    </div>
+                                    </div></div>
+                                <div class="col-md-3"> <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Growth
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Inovasi produk</a>
+                                        <a class="dropdown-item" href="#">Memelihara skill</a>
+                                    </div>
+                                    </div></div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="step">
+                              <h4>Are you experiencing a high fever, dry cough, tiredness and loss of taste or smell?</h4>
+                              <div class="form-check ps-0 q-box">
+                                  <div class="q-box__question">
+                                      <input class="form-check-input question__input" id="q_2_yes" name="q_2" type="radio" value="Yes"> 
+                                      <label class="form-check-label question__label" for="q_2_yes">Yes</label>
+                                  </div>
+                                  <div class="q-box__question">
+                                      <input checked class="form-check-input question__input" id="q_2_no" name="q_2" type="radio" value="No"> 
+                                      <label class="form-check-label question__label" for="q_2_no">No</label>
                                   </div>
                               </div>
                           </div>
@@ -221,6 +303,9 @@
       <div class="preloader-section section-left"></div>
       <div class="preloader-section section-right"></div>
   </div>
-   <script src="{{ asset('js/script.js')}}"></script>  
+   <script src="{{ asset('js/script.js')}}"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
 </body>
 </html>
