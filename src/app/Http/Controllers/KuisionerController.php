@@ -30,6 +30,7 @@ class KuisionerController extends Controller
             'jumlah_level4' => count($daftarLevel4),
             'level5' => $daftarLevel5,
             'jumlah_level5' => count($daftarLevel5),
+            'level_wanted' => 4
             ];
 
         return view('kuisioner', compact('daftarPertanyaan'));

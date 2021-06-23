@@ -18,12 +18,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level0'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -36,12 +36,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level1'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -54,12 +54,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level2'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -72,12 +72,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level3'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -90,12 +90,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level4'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -108,12 +108,12 @@
         @php $counter = 1; @endphp
         @foreach($daftarPertanyaan['level5'] as $pertanyaan)
             <div class="group-pertanyaan">
-                {{$counter}}. Pertanyaan : {{$pertanyaan->pertanyaan}}
+                {{$counter}}. Pertanyaan : <span class="teks-pertanyaan">{{$pertanyaan->pertanyaan}}</span>
                 <div class="group-jawaban">
                     <input type="radio"  name="{{$pertanyaan->id}}" value="0"><span>Tidak sama sekali</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="33"><span>Sedikit</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="66"><span>Hampir</span><br>
-                    <input type="radio"  name="{{$pertanyaan->id}}" value="100"><span>Sepenuhnya</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.33"><span>Sedikit</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="0.66"><span>Hampir</span><br>
+                    <input type="radio"  name="{{$pertanyaan->id}}" value="1"><span>Sepenuhnya</span><br>
                 </div>
             </div>
             <br>
@@ -121,8 +121,17 @@
         @endforeach
     </div>
 
-    <div class="hasil">
-        <p>Maturity model : <span class="maturity-value">?</span></p>
+    <div>
+        <button id="btn-hitung-hasil" type="button">Hitung Hasil</button>
+    </div>
+
+    <div class="detail-report">
+        <div class="hasil">
+            <p>Maturity model : <span class="maturity-value">?</span></p>
+            <p>Level anda saat ini: <span class="current-maturity-level">?</span></p>
+            <p>Level yang anda inginkan: <span>{{$daftarPertanyaan['level_wanted']}}</span></p>
+            <p><span class="selisih-maturity"></span></p>
+        </div>
     </div>
 
     <div>
@@ -132,6 +141,7 @@
         <input type="hidden" id="jumlah_level3" name="jumlah_level3" value="{{$daftarPertanyaan['jumlah_level3']}}">
         <input type="hidden" id="jumlah_level4" name="jumlah_level4" value="{{$daftarPertanyaan['jumlah_level4']}}">
         <input type="hidden" id="jumlah_level5" name="jumlah_level5" value="{{$daftarPertanyaan['jumlah_level5']}}">
+        <input type="hidden" id="level_wanted" name="level_wanted" value="{{$daftarPertanyaan['level_wanted']}}">
     </div>
 
     <!-- Script -->
@@ -142,13 +152,73 @@
     <script>
         $(function(){
             console.log('document ready');
+
+            function createReport(maturityValue, currentLevel, levelWanted, selisihMaturity, jawaban0, jawaban1, jawaban2)
+            {
+                var reportElement = "";
+                reportElement += `<p>Maturity model : <span class="maturity-value">${maturityValue}</span></p>`;
+                reportElement += `<p>Level yang anda saat ini: <span class="current-maturity-level">${currentLevel}</span></p>`;
+                reportElement += `<p>Level yang anda inginkan: <span>${levelWanted}</span></p>`;
+                reportElement += `<p>Selisih nilai maturyity saat ini dengan yang akan datang adalah: <span class="selisih-maturity">${selisihMaturity}</span></p>`;
+                reportElement += `<p>Pertanyaan yang dijawab dengan jawaban tidak sama sekali: </p>`;
+                reportElement += `<ul>`;
+                var i = 0;
+                for(i = 0; i < jawaban0.length; i++)
+                {
+                    reportElement += `<li>${jawaban0[i]}</li>`;
+                }
+                reportElement += `</ul>`;
+
+                reportElement += `<p>Pertanyaan yang dijawab dengan jawaban kurang: </p>`;
+                reportElement += `<ul>`;
+                for(i = 0; i < jawaban1.length; i++)
+                {
+                    reportElement += `<li>${jawaban1[i]}</li>`;
+                }
+                reportElement += `</ul>`;
+
+                reportElement += `<p>Pertanyaan yang dijawab dengan jawaban biasa: </p>`;
+                reportElement += `<ul>`;
+                for(i = 0; i < jawaban2.length; i++)
+                {
+                    reportElement += `<li>${jawaban2[i]}</li>`;
+                }
+                reportElement += `</ul>`;
+
+
+                return reportElement;
+            }
+
             function hitungMaturity()
             {
+                var jawaban0 = [];
+                var jawaban1 = [];
+                var jawaban2 = [];
+                var jawaban3 = [];
+
+
                 var sumLevel0 = 0;
                 var jumlahPertanyaanLevel0 = 0;
                 $('.level0').children('.group-pertanyaan').each(function () {
                     sumLevel0 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel0 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+
+                    }
                 });
                 if(jumlahPertanyaanLevel0 != $('#jumlah_level0').val()) return false;
 
@@ -157,6 +227,22 @@
                 $('.level1').children('.group-pertanyaan').each(function () {
                     sumLevel1 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel1 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+                    }
                 });
                 if(jumlahPertanyaanLevel1 != $('#jumlah_level1').val()) return false;
 
@@ -165,6 +251,23 @@
                 $('.level2').children('.group-pertanyaan').each(function () {
                     sumLevel2 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel2 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+
+                    }
                 });
                 if(jumlahPertanyaanLevel2 != $('#jumlah_level2').val()) return false;
 
@@ -173,6 +276,23 @@
                 $('.level3').children('.group-pertanyaan').each(function () {
                     sumLevel3 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel3 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+
+                    }
                 });
                 if(jumlahPertanyaanLevel3 != $('#jumlah_level3').val()) return false;
 
@@ -181,6 +301,23 @@
                 $('.level4').children('.group-pertanyaan').each(function () {
                     sumLevel4 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel4 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+
+                    }
                 });
                 if(jumlahPertanyaanLevel4 != $('#jumlah_level4').val()) return false;
 
@@ -189,6 +326,23 @@
                 $('.level5').children('.group-pertanyaan').each(function () {
                     sumLevel5 +=  parseFloat($('.group-jawaban input:checked', this).val());
                     jumlahPertanyaanLevel5 += 1;
+
+                    var nilai = parseFloat($('.group-jawaban input:checked', this).val());
+                    switch (nilai){
+                        case 0:
+                            jawaban0.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.33:
+                            jawaban1.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 0.66:
+                            jawaban2.push($('.teks-pertanyaan', this).text());
+                            break;
+                        case 1:
+                            jawaban3.push($('.teks-pertanyaan', this).text());
+                            break;
+
+                    }
                 });
                 if(jumlahPertanyaanLevel5 != $('#jumlah_level5').val()) return false;
 
@@ -200,7 +354,7 @@
                 var tingkatCompliance5 = sumLevel5 / jumlahPertanyaanLevel5;
                 var totalCompliance = tingkatCompliance0 + tingkatCompliance1 + tingkatCompliance2 + tingkatCompliance3 + tingkatCompliance4 + tingkatCompliance5;
 
-                // console.log(totalCompliance);
+                console.log(totalCompliance);
 
                 var normalCompliance0 = tingkatCompliance0 / totalCompliance;
                 var normalCompliance1 = tingkatCompliance1 / totalCompliance;
@@ -208,26 +362,87 @@
                 var normalCompliance3 = tingkatCompliance3 / totalCompliance;
                 var normalCompliance4 = tingkatCompliance4 / totalCompliance;
                 var normalCompliance5 = tingkatCompliance5 / totalCompliance;
+                console.log(normalCompliance0 + normalCompliance1 + normalCompliance2 + normalCompliance3 + normalCompliance4 + normalCompliance5);
 
 
                 var maturityValue = (normalCompliance0 * 0) + (normalCompliance1 * 1) + (normalCompliance2 * 2) + (normalCompliance3 * 3) + (normalCompliance4 * 4) + (normalCompliance5 * 5);
 
-                return maturityValue;
+                console.log(maturityValue);
+                return [maturityValue, jawaban0, jawaban1, jawaban2, jawaban3];
             }
 
+            function hitungSelisihMaturity(maturityValue, levelWanted)
+            {
 
-            $('.group-jawaban input').change(function(){
+                switch (parseInt(levelWanted)) {
+                    case 0:
+                        return 0 - maturityValue;
+                        break;
+                    case 1:
+                        return 0.1 - maturityValue;
+                        break;
+                    case 2:
+                        return 1.1 - maturityValue;
+                        break;
+                    case 3:
+                        return 2.1 - maturityValue;
+                        break;
+                    case 4:
+                        return 3.1 - maturityValue;
+                        break;
+                    case 5:
+                        return 4.1 - maturityValue;
+                        break;
+                    default:
+                        return maturityValue - maturityValue;
+                }
+            }
+
+            function hitungLevelMaturity(maturityValue)
+            {
+                maturityValue = parseFloat(maturityValue);
+                if (maturityValue < 0) {
+                    return false
+                } else if(maturityValue < 0.1) {
+                    return 0;
+                } else if (maturityValue < 1.1) {
+                    return 1;
+                } else if (maturityValue < 2.1) {
+                    return 2;
+                } else if (maturityValue < 3.1) {
+                    return 3;
+                } else if (maturityValue < 4.1) {
+                    return 4;
+                } else {
+                    return 5;
+                }
+            }
+
+            $('#btn-hitung-hasil').click(function(){
                 console.log('loading...');
-                var maturityValue = hitungMaturity();
-                if(maturityValue == false)
+                var result = hitungMaturity();
+                if(result == false)
                 {
                     console.log("jumlah pertanyaan tidak sama");
                 } else {
+                    var maturityValue = result[0];
                     console.log("maturitynya adalah: " + maturityValue);
                     $('.maturity-value').text(maturityValue);
+                    var currentLevel = hitungLevelMaturity(maturityValue);
+                    if(currentLevel != false)
+                    {
+                        var levelWanted = parseInt($('#level_wanted').val());
+                        var selisihMaturity = hitungSelisihMaturity(parseFloat(maturityValue), levelWanted);
+                        if(selisihMaturity < 0)
+                        {
+                            selisihMaturity = 0;
+                        }
+                        var reportElement = createReport(maturityValue, currentLevel, levelWanted, selisihMaturity, result[1], result[2], result[3]);
+                        $('.hasil').empty();
+                        $('.hasil').append(reportElement);
+                    }
                 }
                 console.log('selesai');
-
             });
 
         });
