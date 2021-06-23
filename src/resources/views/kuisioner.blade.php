@@ -126,11 +126,7 @@
     </div>
 
     <div class="detail-report">
-        <div class="hasil">
-            <p>Maturity model : <span class="maturity-value">?</span></p>
-            <p>Level anda saat ini: <span class="current-maturity-level">?</span></p>
-            <p>Level yang anda inginkan: <span>{{$daftarPertanyaan['level_wanted']}}</span></p>
-            <p><span class="selisih-maturity"></span></p>
+        <div class="hasil" style="border: #0a53be">
         </div>
     </div>
 
