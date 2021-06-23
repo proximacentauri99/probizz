@@ -1,29 +1,29 @@
 INSERT INTO stakeholder(`jabatan_stakeholder`)
-VALUES 
-    ('CFO'), 
-    ('Business Executive'), 
-    ('CIO'), 
+VALUES
+    ('CFO'),
+    ('Business Executive'),
+    ('CIO'),
     ('Head IT Administration');
 
 INSERT INTO `business_goals`(`business_goals`)
-VALUES 
-    ('Provide a good return on investment of IT-enabled business investments'); 
+VALUES
+    ('Provide a good return on investment of IT-enabled business investments');
 
 INSERT INTO `it_goals`(`id`,`it_goals`)
-VALUES 
-    (24,"Improve IT's cost-efficiency and its contribution to business profitability"); 
+VALUES
+    (24,"Improve IT's cost-efficiency and its contribution to business profitability");
 
 INSERT INTO `business_it_goals`(`id_business_goals`, `id_it_goal`)
 VALUES
-    (1,24)
+    (1,24);
 
 INSERT INTO `it_process`(`kode`,`it_process`)
-VALUES 
-    ('PO5', 'Manage the IT Investment'); 
+VALUES
+    ('PO5', 'Manage the IT Investment');
 
 INSERT INTO `it_process`(`kode`,`it_process`)
-VALUES 
-    ('DS6', 'Identify and Allocate Costs'); 
+VALUES
+    ('DS6', 'Identify and Allocate Costs');
 
 INSERT INTO `stakeholder_it_process`(`id_stakeholder`, `id_it_process`)
 VALUES
@@ -36,7 +36,7 @@ VALUES
 
 
 INSERT INTO `pertanyaan`(`id_it_process`, `pertanyaan`, `level`)
-VALUES 
+VALUES
     (1, 'Perusahaan tidak memiliki kesadaran akan pentingnya pemilihan investasi TI dan perencanaan penganggaran pada TI', 0),
     (1, 'Perusahaan tidak melakukan pengawasan atau pemantauan pada investasi dan pengeluaran TI', 0),
     (1, 'Perusahaan menyadari akan perlunya pengelolaan pada investasi TI, namun kebutuhan tersebut tidak dikomunikasikan secara konsisten', 1),
@@ -81,7 +81,7 @@ VALUES
 
 
 
- 
+
 
 
 
