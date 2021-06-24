@@ -1,391 +1,513 @@
-INSERT INTO stakeholder(`jabatan_stakeholder`)
-VALUES 
-  ('CFO'), 
-  ('Business Executive'), 
-  ('CIO'), 
-  ('Head IT Administration'),
-  ('Head Operations'),
-  ('Chief Architect'),
-  ('Head Development'),
-  ('PMO'),
-  ('CEO'),
-  ('Business Process Owner'),
-  ('Deployment Team'),
-  ('Training Department');
 
-INSERT INTO `business_goals`(`id`,`business_goals`)
-VALUES 
-    (1,'Provide a good return on investment of IT-enabled business investments'),
-    (17,'Acquire and maintain skilled and motivated people'),
-    (4,'Improve customer orientation and service');
-
-INSERT INTO `it_goals`(`id`,`it_goals`)
-VALUES 
-    (24,"Improve IT's cost-efficiency and its contribution to business profitability"),
-    (9,"Acquire and maintain IT skills that respond to the IT strategy"),
-    (3, "Ensure satisfaction of end users with service offerings and service levels"),
-    (23, "Make sure that IT services are available as required");
-
-INSERT INTO `it_process`(`kode`,`it_process`)
-VALUES 
-  ('PO5', 'Manage the IT Investment'),
-  ('DS6', 'Identify and Allocate Costs'),
-  ('PO7', 'Manage IT Human Resources'),
-  ('AI5', 'Procure IT Resources'),
-  ('PO8', 'Manage Quality'),
-  ('AI4', 'Enable Operation and Use'),
-  ('DS1', 'Define and Manage Service Levels'),
-  ('DS2', 'Manage Third-Party Services'),
-  ('DS7', 'Educate and Train Users'),
-  ('DS8', 'Manage Service Desk and Incidents'),
-   ('DS10', 'Manage Problems'),
-   ('DS13', 'Manage Operations'),
-   ('DS3', 'Manage Performance and Capacity'),
-   ('DS4', 'Ensure Continous Service');
-    
-
-INSERT INTO `business_it_goals`(`id_business_goals`, `id_it_goal`)
-VALUES
-    (1,24),
-    (17,9),
-    (4,3),
-    (4,23);
-
-INSERT INTO `it_goal_process`(`id_it_goal`, `id_it_process`)
-VALUES
-    (24,1),
-    (24,2),
-    (9,3),
-    (9,4),
-    (3,5),
-    (3,6),
-    (3,7),
-    (3,8),
-    (3,9),
-    (3,10),
-    (3,11),
-    (3,12),
-    (23,13),
-    (23,14),
-    (23,10),
-    (23,12);
-
-
-
-INSERT INTO `stakeholder_it_process`(`id_stakeholder`, `id_it_process`)
-VALUES
-    (1,1),
-    (2,1),
-    (3,1),
-    (4,1),
-    (4,2),
-    (5,3),
-    (6,3),
-    (7,3),
-    (4,3),
-    (8,3),
-    (9,4),
-    (5,4),
-    (7,4),
-    (4,4),
-    (8,4),
-    (3,5),
-    (10,6),
-    (5,6),
-    (7,6),
-    (11,6),
-    (12,6);
-
-
-
-
-
-
-INSERT INTO `pertanyaan`(`id_it_process`, `pertanyaan`, `level`)
-VALUES 
-    (1, 'Perusahaan tidak memiliki kesadaran akan pentingnya pemilihan investasi TI dan perencanaan penganggaran pada TI', 0),
-    (1, 'Perusahaan tidak melakukan pengawasan atau pemantauan pada investasi dan pengeluaran TI', 0),
-    (1, 'Perusahaan menyadari akan perlunya pengelolaan pada investasi TI, namun kebutuhan tersebut tidak dikomunikasikan secara konsisten', 1),
-    (1, 'Tanggung jawab untuk pemilihan investasi TI dan penganggaran TI pada Perusahaan dilakukan secara ad hoc (tidak terorganisir/tanpa perencanaan)', 1),
-    (1, 'Perusahaan memiliki implementasi pemilihan investasi TI dan penganggaran TI yang terisolasi dengan dokumen yang informal', 1),
-    (1, 'Investasi TI pada Perusahaan dilakukan secara ad hoc (tidak terorganisir/tanpa perencanaan)', 1),
-    (1, 'Perusahaan bertindak reaktif dalam investasi TI atau bersifat operasional yang berfokus pada keputusan penganggara', 1),
-    (1, 'Perusahaan memiliki koordinasi pengertian secara implisit akan kebutuhan pemilihan investasi TI dan penganggaran TI', 2),
-    (1, 'Perusahaan melakukan komunikasi yang baik terkait kebutuhan akan proses pemilihan dan penganggaran investasi TI', 2),
-    (1, 'Pemenuhan kebutuhan pemilihan investasi TI dan penganggaran TI pada Perusahaan masih tergantung pada inisiatif individu', 2),
-    (1, 'Perusahaan memiliki teknik umum dan standar untuk pengembangan komponen penganggaran TI (infrastruktur, aplikasi dan layanan, sumber daya manusia, dll)
-', 2),
-    (1, 'Perusahaan bertindak reaktif dan taktis dalam penyetujuan anggaran TI', 2),
-    (1, 'Perusahaan memiliki kebijakan dan proses investasi serta penganggaran investasi TI yang terdefinisi, terdokumentasi, dikomunikasikan dengan baik, dan mencakup isu utama bisnis dan teknologi
-', 3),
-    (1, 'Anggaran TI yang dimiliki oleh Perusahaan telah selaras dengan rencana strategis TI dan rencana bisnis yang dimiliki', 3),
-    (1, 'Proses pemilihan dan penganggaran investasi TI pada Perusahaan telah diatur secara formal, terdokumentasi, dan dikomunikasikan dengan baik
-', 3),
-    (1, 'Pelatihan formal telah diadakan di Perusahaan namun masih berdasarkan pada inisiatif individu', 3),
-    (1, 'Perusahaan telah memiliki persetujuan formal dari pemilihan investasi TI dan penganggaran TI', 3),
-    (1, 'Anggota staf TI pada Perusahaan memiliki pengalaman dan keterampilan yang dibutuhkan untuk mengembangkan proses penganggaran TI dan merekomendasikan investasi TI yang tepat', 3),
-    (1, 'Tanggung jawab dan akuntabilitas terhadap pemilihan dan penganggaran investasi TI pada Perusahaan ditugaskan kepada individu tertentu secara khusus', 4),
-    (1, 'Adanya duplikasi anggaran TI pada Perusahaan telah diidentifikasi dan diselesaikan', 4),
-    (1, 'Perusahaan memiliki analisa biaya TI secara formal, meliputi biaya langsung maupun tidak langsung serta investasi yang diusulkan, dengan adanya pertimbangan dari semua total biaya selama ini yang sudah dikeluarkan
-', 4),
-    (1, 'Perusahaan memiliki proses penganggaran TI yang proaktif dan terstandarisasi', 4),
-    (1, 'Dampak dari pergeseran biaya dalam pengembangan dan operasional dari hardware dan software untuk proses integrasi sistem dan SDM TI telah ditetapkan dalam perencanaan investasi TI', 4),
-    (1, 'Perusahaan telah melakukan perhitungan investasi TI berupa manfaat dan keuntungan secara finansial dan non finansial', 4),
-    (1, 'Praktek pelayanan Perusahaan yang baik telah digunakan untuk menghitung biaya dan mengidentifikasi pendekatan untuk meningkatkan efektifitas investasi TI', 5),
-    (1, 'Analisa pengembangan teknologi telah dilakukan oleh Perusahaan guna pemilihan investasi TI dan proses penganggaran TI', 5),
-    (1, 'Perusahaan secara terus-menerus meningkatkan proses manajemen investasi TI berdasarkan pengalaman dan analisa kinerja investasi TI', 5),
-    (1, 'Keputusan investasi TI pada Perusahaan memasukkan harga/sesuai dengan tren peningkatan kinerja', 5),
-    (1, 'Pendanaan alternatif pada investasi TI dinilai dan dievaluasi secara formal dalam konteks struktur modal yang ada pada Perusahaan dengan menggunakan metode evaluasi formal', 5),
-    (1, 'Perusahaan bertindak proaktif dalam hal identifikasi perbedaan dan variasi', 5),
-    (1, 'Analisa biaya dan manfaat yang selama ini telah dikeluarkan oleh Perusahaan masuk ke dalam keputusan investasi', 5),
-    (2, 'Perusahaan memiliki kelebihan dalam mengidentifikasi dan mengalokasikan biaya sehubungan dengan layanan informasi disediakan', 0),
-    (2, 'Perusahaan menyadari bahwa ada masalah yang harus ditangani sehubungan dengan akuntansi biaya, dan memang tidak ada komunikasi tentang masalah tersebut', 0),
-    (2, 'Ada pemahaman umum tentang keseluruhan biaya untuk layanan informasi seperti adanya perincian biaya per pengguna, pelanggan, departemen , kelompok pengguna, fungsi layanan, proyek atau kiriman', 1),
-    (2, 'Perusahaan selalu melakukan pemantauan biaya , tidak hanya ada  agregat pelaporan biaya kepada management ', 1),
-    (2, 'Apakah biaya TI dialokasikan sebagai pengeluaran operasional ?', 1),
-    (2, "Apakah bisnis ada memberikan informasi tentang biaya atau manfaat dari penyediaan layanan ?", 1),
-    (2, " Apakah Perusahaan memiliki kesadaran keseluruhan akan kebutuhan untuk mengidentifikasi dan mengalokasikan biaya ? ?", 2),
-    (2, "Apakah alokasi biaya didasarkan pada biaya informal atau dasar asumsi, misalnya, biaya perangkat keras, dan selalu ada tautan ke driver nilai ?", 2),
-    (2, "Apakah ada pelatihan atau komunikasi formal yang dilakukan oleh Perusahaan tentang identifikasi biaya standar dan prosedur alokasi ?", 2),
-    (2, "Apakah Perusahaan memberikan tanggung jawab untuk pengumpulan biaya dan alokasi biaya ?", 2),
-    (2, "Apakah Perusahaan melakukan proses alokasi biaya yang berulang  ?", 2),
-    (2, "Apakah Perusahaan menggunakan model biaya layanan informasi yang terdefinisi dan terdokumentasi ?", 3),
-    (2, "Apakah proses untuk menghubungkan biaya TI dengan layanan yang diberikan kepada pengguna didefinisikan oleh manajemen Perusahaan ?", 3),
-    (2, "Apakah Perusahaan memiliki tingkat kesadaran yang tepat mengenai biaya yang dapat distribusikan ke layanan informasi ?", 3),
-    (2, "Apakah Perusahaan memberikan informasi dasar mengenai biaya terkait bisnis ?", 3),
-    (2, "Apakah di Perusahaan , tanggung jawab dan akuntabilitas biaya layanan informasi didefinisikan dan dipahami sepenuhnya di semua tingkatan dan sedang didukung dengan pelatihan formal ?", 4),
-    (2, "Apakah di Perusahaan , biaya langsung dan tidak langsung diidentifikasi dan dilaporkan secara tepat waktu dan otomatis ke pemilik proses bisnis dan pengguna ?", 4),
-    (2, "Jika biaya penyimpangan terdeteksi , apakah Perusahaan melakukan pemantauan dan evaluasi biaya ?", 4),
-    (2, "Apakah pelaporan biaya layanan informasi terkait dengan tujuan bisnis dan SLA dipantau oleh pemilik proses bisnis ?", 4),
-    (2, "Apakah Perusahaan menerapkan fungsi keuangan untuk meninjau kewajaran proses alokasi biaya ?", 4),
-    (2, "Perusahaan menerapkan Sistem akuntansi biaya otomatis , tetapi difokuskan pada fungsi layanan informasi daripada pada proses bisnis ?", 4),
-    (2, "Apakah tujuan dan metrik disepakati untuk pengukuran biaya tetapi diukur secara tidak konsisten ?", 4),
-    (2, "Apakah biaya layanan yang diberikan oleh Perusahaan diidentifikasi, ditangkap, diringkas, dan dilaporkan kepada pemilik proses bisnis  dan pengguna ?", 5),
-    (2, "Apakah biaya yang diidentifikasi sebagai item dikenakan biaya dan dapat mendukung sistem tagihan secara tepat untuk menagih pengguna pada layanan yang diberikan berdasarkan pemanfaatan ?", 5),
-    (2, "Apakah detail biaya sudah mendukung SLA ?", 5),
-    (2, "Apakah pemantauan dan evaluasi biaya layanan digunakan untuk mengoptimalkan biaya sumber daya TI ?", 5),
-    (2, "Apakah angka biaya yang diperoleh digunakan untuk memverifikasi realisasi manfaat dalam proses penganggaran organisasi ?", 5),
-    (2, "Apakah di Perusahaan , pelaporan biaya layanan informasi memberikan peringatan dini tentang perubahan persyaratan bisnis melalui sistem pelaporan cerdas ?", 5),
-    (2, "Apakah variabel model biaya yang digunakan oleh Perusahaan berasal dari volume yang diproses untuk setiap layanan yang disediakan ?", 5),
-    (2, "Apakah manajemen biaya disempurnakan ke tingkat praktik industri, berdasarkan hasil perbaikan berkelanjutan dan pembandingan dengan organisasi lain ?", 5),
-    (3, "Apakah ada kesadaran tentang pentingnya menyelaraskan manajemen SDM TI dengan proses perencanaan teknologi untuk organisasi?", 0),
-    (3, "Apakah ada bagian yang bertanggung jawab mengenai TI pada bagian human resource?", 0),
-    (3, "Apakah menurut anda TI dibutuhkan pada bagian human resource?", 1),
-    (3, "Apakah manajemen SDM dilakukan secara informal dan reaktif?", 1),
-    (3, "Apakah menurut anda proses manjemen SDM TI difokuskan pada perekrutan dan pengelolaan personel?", 1),
-    (3, "Apakah menurut anda dengan perkembangan teknologi sekarang ini dibutuhkan kemampuan dan kompetensi baru?", 1),
-    (3, "Apakah ada niatan dalam mempekerjakan dan mengelola personel TI karena kebutuhan proyek, dibanding oleh karena keseimbangan antara ketersediaan staf internal dan eksternal? ", 2),
-    (3, "Apakah perusahaan mengadakan pelatihan untuk staf baru?", 2),
-    (3, "Apakah manajemen menyadari kebutuhan akan manajemen SDM TI?", 3),
-    (3, "Apakah ada rencana dalam melakukan manajemen SDM TI?", 3),
-    (3, "Apakah ada pendekatan strategis untuk mempekerjakan dan mengelola personel TI?", 3),
-    (3, "Apakah ada rencana pelatihan formal untuk memenuhi kebutuhan SDM TI?", 3),
-    (3, "Apakah ada program rotasi yang dirancang untuk memperluas keterampilan manajemen teknis dan bisnis yang ditetapkan?", 3),
-    (3, "Apakah tanggung jawab untuk pengembangan dan pemeliharaan rencana manajemen SDM TI diberikan kepada individu/kelompok tertentu dengan keahlian dan keterampilan yang diperlukan untuk mengembangkan rencana?", 4),
-    (3, "Apakah proses pengembangan dan pengelolaan rencana manajemen SDM TI responsif terhadap perubahan?", 4),
-    (3, "Apakah ada standarisasi dalam organisasi untuk memungkinkannya mengidentifikasi penyimpangan dari rencana manajemen SDM TI, khususnya pada pengelolaan pertumbuhan dan pergantian personel TI?", 4),
-    (3, "Apakah kompensasi dan tinjauan kinerja dibuat dan dibandingkan dengan organisasi TI lainnya?", 4),
-    (3, "Apakah manajemen SDM TI bersifat proaktif dengan mempertimbangkan pengembangan jalur karier?", 4),
-    (3, "Apakah rencana Manajemen SDM selalu diperbaharui sesuai dengan kebutuhan?", 5),
-    (3, "Apakah perencanaan manajemen SDM terintegrasi dengan teknologi IT?", 5),
-    (3, "Apakah manajemen SDM sejalan dengan arah strategis organisasi?", 5),
-    (3, "Apakah komponen manajemen SDM TI konsisten dengan praktik industri yang baik, seperti kompensasi, tinjauan kinerja, transfer pengetahuan, pelatihan dan pendampingan?", 5),
-    (3, "Apakah program pelatihan dikembangkan berdasarkan semua standar dan produk teknologi baru sebelum diterapkan di organisasi?", 5),
-    (4, "Apakah ada proses pengadaan sumber daya IT yang ditetapkan?", 0),
-    (4, "Apakah Perusahaan menyadari perlunya kebijakan dan prosedur pengadaan yang jelas untuk memastikan bahwa semua sumber daya IT tersedia secara tepat waktu dan hemat biaya?", 0),
-    (4, "Perusahaan menyadari bahwa mereka harus memiliki kebutuhan untuk mendokumentasikan kebijakan dan prosedur yang menghubungkan akuisisi IT dengan proses pengadaan organisasi bisnis secara keseluruhan.", 1),
-    (4, "Kontrak untuk perolehan sumber daya IT dikembangkan dan dikelola oleh manajer proyek dan individu lain yang melaksanakan penilaian profesional mereka daripada sebagai hasil dari prosedur dan kebijakan formal", 1),
-    (4, "Kontrak untuk akuisisi dikelola pada akhir proyek daripada secara berkelanjutan", 1),
-    (4, "Hanya ada hubungan ad hoc antara akuisisi perusahaan dan proses manajemen kontrak dan IT.", 1),
-    (4, "Ada kesadaran organisasi tentang perlunya memiliki kebijakan dan prosedur dasar untuk akuisisi IT", 2),
-    (4, "Kebijakan-kebijakan dan prosedur sudah sebagian terintegrasi dengan proses pengadaan organisasi bisnis secara keseluruhan", 2),
-    (4, "Proses pengadaan sumber daya IT sebagian besar digunakan untuk proyek besar dan terlihat.", 2),
-    (4, "Apakah tanggung jawab dan akuntabilitas untuk pengadaan IT dan manajemen kontrak ditentukan oleh pengalaman masing-masing manajer kontrak?", 2),
-    (4, "Pentingnya manajemen pemasok dan manajemen hubungan diakui tapi ditangani berdasarkan inisiatif individu", 2),
-    (4, "Proses kontrak sebagian besar digunakan oleh proyek-proyek besar atau yang sangat terlihat", 2),
-    (4, "Apakah manajemen telah menerapkan kebijakan dan prosedur untuk akuisisi IT?", 3),
-    (4, "Kebijakan dan prosedur dipandu oleh keseluruhan proses pengadaan organisasi bisnis.", 3),
-    (4, "Apakah ada standar IT untuk perolehan sumber daya IT?", 3),
-    (4, "Pemasok sumber daya IT diintegrasikan ke dalam mekanisme manajemen proyek organisasi dari perspektif manajemen kontrak.", 3),
-    (4, "Apakah sebagian besar sistem pengadaan bisnis terintegrasi dengan akuisisi TI secara keseluruhan?", 3),
-    (4, "Manajemen TI mengkomunikasikan kebutuhan akuisisi yang sesuai serta manajemen kontrak pada seluruh fungsi IT.", 3),
-    (4, "Apakah sistem pengadaan bisnis terintegrasi dengan akuisisi TI secara keseluruhan?", 4),
-    (4, "Standar IT untuk akuisisi sumber daya IT digunakan untuk semua pengadaan.", 4),
-    (4, "Pengukuran pada kontrak dan manajemen pengadaan diambil secara relevan dengan kasus bisnis untuk akuisisi IT.", 4),
-    (4, "Apakah pelaporan aktivitas akuisisi TI yang mendukung tujuan bisnis telah tersedia?", 4),
-    (4, "Apakah manajemen mengetahui pengecualian terhadap kebijakan serta prosedur akuisisi IT?", 4),
-    (4, "Manajemen strategis hubungan sedang berkembang.", 4),
-    (4, "Apakah Perusahaan melakukan manajemen TI dengan menggunakan manajemen kontrak dan proses akuisisi untuk semua akuisisi dengan memonitor pengukuran kinerja?", 4),
-    (4, "Manajemen menjadikan lembaga dengan menyusun sumber daya dengan melakukan dengan cara menyeluruh untuk akuisisi TI.", 5),
-    (4, "Manajemen telah menetapkan kesesuaian terhadap kebijakan dan metode akuisisi TI yang harus dipatuhi.", 5),
-    (4, "Evaluasi pada kontrak dan manajemen penyusunan diambil yang berguna dengan kasus bisnis untuk akuisisi TI.", 5),
-    (4, "Koneksi yang sehat akan menjadikan waktu dengan kebanyakan penyalur dan mitra, dan koneksi yang baik dengan cara diukur dan dipantau", 5),
-    (4, "Koneksi yang dikelola atau direncanakan secara strategis?", 5),
-    (4, "Taraf kebijakan dan prosedur IT untuk akuisisi dilakukan dengan cara strategis dan melakukan pengukuran proses.", 5),
-    (4, "Apakah manajemen IT menghubungkan kepentingan dengan cara strategis dari akuisisi yang sesuai dan manajemen kontrak yang ada di seluruh fungsi IT?", 5),
-    (5, "Perusahaan belum memiliki perencanaan Quality Management System (QMS) dan metodologi System Development Life Cycle (SDLC)", 0),
-    (5, "Manajemen Perusahaan tidak menyadari bahwa kualitas dari layanan Perusahaan sangat penting", 0),
-    (5, "Manajemen membuat penilaian terkait layanan di Perusahaan secara informal untuk mengukur kualitas ", 1),
-    (5, "Apakah aktivitas Quality Management System (QMS) pada Perusahaan berfokus pada IT-project dan process oriented?", 2),
-    (5, "Adanya program atau aplikasi yang digunakan untuk memonitor aktivitas Quality Management System (QMS) pada manajemen Perusahaan", 2),
-    (5, "Apakah proses Quality Management System (QMS) dikomunikasikan kepada perusahaan oleh manajemen dengan mengikutsertakan manajemen IT dan manajemen end-user?", 3),
-    (5, "Adanya kegiatan edukasi dan pelatihan untuk staff dan karyawan Perusahaan terkait kualitas layanan yang diberikan", 3),
-    (5, "Apakah ada ekspetasi kualitas dasar yang didefinisikan dan digunakan di berbagai proyek pada organisasi IT?", 3),
-    (5, "Apakah ada perencanaan dan pelaksanaan survey terkait kepuasan kualitas layanan di Perusahaan?", 3),
-    (5, "Alat maupun pelatihan yang menunjang sistem manajemen kualitas sudah dimunculkan (diputuskan)", 3),
-    (5, "Suvery mengenai kepuasan terhadap kualitas layanan Perusahaan sudah direncanakan", 3),
-    (5, "Perusahaan memiliki standar mengenai kualitas layanan", 4),
-    (5, "Apakah survey kualitas kepuasan dijalankan secara konsisten?", 4),
-    (5, "apakah proses benchmarking dengan kompetitor sudah mulai dilakukan?", 4),
-    (5, "Apakah IT management menjadi dasar pengetahuan dari metriks kualitas?", 4),
-    (5, "Apakah proses analisis akar permasalahan (root cause analysis) diaplikasikan secara berkala?", 4),
-    (5, "Sistem manajemen kualitas (QMS) sudah diterapkan pada setiap aktivitas maupun proses bisnis di Perusahaan", 5),
-    (5, "Sistem manajemen kualitas (QMS) yang diterapkan sudah fleksibel dan mudah beradaptasi dengan perubahan lingkungan di Perusahaan", 5),
-    (5, "Perusahaan telah rutin mengadakan proses brenchmarking dengan program pendidikan diluar (kompetitor Perusahaan)", 5),
-    (5, "Proses manajemen mutu Perusahaan sudah sesuai standar dan spesifikasi", 5),
-    (6, "Manajemen proses terhadap perubahan tidak terdefinisi sama sekali serta segala perubahan dapat dilakukan tanpa kontrol.", 0),
-    (6, "Tidak ada kesadaran terhadap bagaimana sebuah perubahan dapat berdampak negatif bagi perusahaan terutama terhadap operasi bisnis dan teknologi informasi.", 0),
-    (6, "Tidak ada kesadaran terhadap bagaimana sebuah manajemen perubahan yang baik dapat berdampak positif juga untuk perusahaan.", 0),
-    (6, "Perusahaan mengetahui bahwa setiap perubahan yang ada harus dikelola dan diawasi", 1),
-    (6, "Terdapat keberagaman bidang urusan pada Perusahaan yang memungkinkan terjadinya perubahan yang tidak terkelola atau tidak sah. ", 1),
-    (6, "Dokumentasi dari perubahan yang pernah terjadi di Perusahaan relatif sedikit atau tidak ada dan konfigurasi cenderung tidak lengkap dan tidak dapat dipercaya. ", 1),
-    (6, "Kesalahan sering terjadi karena buruknya manajemen perubahan yang ada.", 1),
-    (6, "Terdapat proses manajemen perubahan secara informal namun belum tersrtruktur, mendasar dan cenderung terjadi kesalahan.", 2),
-    (6, "Konfigurasi dari akurasi dokumentasi masih inkonsisten dan perencanaan serta perhitungan dampak terhadap perubahan masih terbatas.", 2),
-    (6, "Terdapat proses manajemen perubahan formal yang baik yang mencakup kategorisasi, prioritasisasi, prosedur-prosedur darurat, autorisasi perubahan dan manajemen pelepasan yang sesuai dengan perkembangan Perusahaan.", 3),
-    (6, "Kesalahan dan perubahan-perubahan tak terkelola masih terjadi.", 3),
-    (6, "Analisis dampak perubahan IT pada operasi bisnis mulai dibentuk untuk mendukung perencanaan teknologi dan aplikasi baru.", 3),
-    (6, "Proses manajemen perubahan dikembangkan dengan baik dan secara konsisten diikuti untuk segala perubahan yang ada. ", 4),
-    (6, "Proses berjalan dengan efisien dan efektif tetapi tetap bersandar pada prosedur manual dan kontrol untuk memastikan bahwa mutu tercapai.", 4),
-    (6, "Proses persetujuan untuk perubahan sudah sesuai aturan.", 4),
-    (6, "Dokumentasi manajemen perubahan dibuat dengan tepat dan umumnya akurat.", 4),
-    (6, "Perencanaan menejemen perubahan IT  menjadi terintegrasi dengan perubahan dalam proses bisnis untuk menjamin training, perubahan organisasi dan persoalan kelancaran bisnis terkelola.", 4),
-    (6, "Terdapat peningkatan koordinasi antara manajemen perubahan IT dan perancangan proses bisnis baru.", 4),
-    (6, "Terdapat proses yang konsisten untuk mengawasi mutu dan kinerja proses manajemen perubahan Perusahaan.", 4),
-    (6, "Proses manajemen perubahan dilakukan secara teratur, ditinjau dan diperbaharui untuk tertap sejalan dengan visi dan misi Perusahaan.", 5),
-    (6, "Informasi konfigurasi sudah berbasis komputer dan menyediakan version control.", 5),
-    (6, "Manajemen perubahan IT terintegrasi dengan manajemen perubahan bisnis untuk memastikan bahwa IT adalah aspek penting dalam peningkatan produktivitas dan penciptaan kesempatan bisnis baru bagi Perusahaan.", 5),
-    (6, "Terdapat Dokumentasi konfigurasi yang akurat.", 5);
-  
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
- 
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
+INSERT INTO `business_goals` (`id`, `business_goals`) VALUES
+(1, 'Provide a good return on investment of IT-enabled business investments'),
+(4, 'Improve customer orientation and service'),
+(17, 'Acquire and maintain skilled and motivated people');
+
+INSERT INTO `business_it_goals` (`id_business_goals`, `id_it_goal`) VALUES
+(1, 24),
+(17, 9),
+(4, 3),
+(4, 23);
+
+INSERT INTO `it_goals` (`id`, `it_goals`) VALUES
+(3, 'Ensure satisfaction of end users with service offerings and service levels'),
+(9, 'Acquire and maintain IT skills that respond to the IT strategy'),
+(23, 'Make sure that IT services are available as required'),
+(24, "Improve IT's cost-efficiency and its contribution to business profitability");
+
+INSERT INTO `it_goal_process` (`id_it_goal`, `id_it_process`) VALUES
+(24, 1),
+(24, 2),
+(9, 3),
+(9, 4),
+(3, 5),
+(3, 6),
+(3, 7),
+(3, 8),
+(3, 9),
+(3, 10),
+(3, 11),
+(3, 12),
+(23, 13),
+(23, 14),
+(23, 10),
+(23, 12);
+
+INSERT INTO `it_process` (`id`, `kode`, `it_process`) VALUES
+(1, 'PO5', 'Manage the IT Investment'),
+(2, 'DS6', 'Identify and Allocate Costs'),
+(3, 'PO7', 'Manage IT Human Resources'),
+(4, 'AI5', 'Procure IT Resources'),
+(5, 'PO8', 'Manage Quality'),
+(6, 'AI4', 'Enable Operation and Use'),
+(7, 'DS1', 'Define and Manage Service Levels'),
+(8, 'DS2', 'Manage Third-Party Services'),
+(9, 'DS7', 'Educate and Train Users'),
+(10, 'DS8', 'Manage Service Desk and Incidents'),
+(11, 'DS10', 'Manage Problems'),
+(12, 'DS13', 'Manage Operations'),
+(13, 'DS3', 'Manage Performance and Capacity'),
+(14, 'DS4', 'Ensure Continous Service');
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(121, '2014_10_12_000000_create_users_table', 1),
+(122, '2014_10_12_100000_create_password_resets_table', 1),
+(123, '2019_08_19_000000_create_failed_jobs_table', 1),
+(124, '2021_06_21_021156_create_stakeholder_table', 1),
+(125, '2021_06_21_021157_create_business_goals_table', 1),
+(126, '2021_06_21_021158_create_it_goals_table', 1),
+(127, '2021_06_21_021159_create_it_process_table', 1),
+(128, '2021_06_21_022117_create_stakeholder_it_process_table', 1),
+(129, '2021_06_21_022619_create_business_it_goals_table', 1),
+(130, '2021_06_21_022749_create_it_goal_process_table', 1),
+(131, '2021_06_21_022807_create_pertanyaan_table', 1),
+(132, '2021_06_21_022808_create_formulir_table', 1),
+(133, '2021_06_21_022840_create_jawaban_table', 1);
+
+INSERT INTO `pertanyaan` (`id`, `id_it_process`, `pertanyaan`, `level`) VALUES
+(1, 1, 'Perusahaan tidak memiliki kesadaran akan pentingnya pemilihan investasi TI dan perencanaan penganggaran pada TI', 0),
+(2, 1, 'Perusahaan tidak melakukan pengawasan atau pemantauan pada investasi dan pengeluaran TI', 0),
+(3, 1, 'Perusahaan menyadari akan perlunya pengelolaan pada investasi TI, namun kebutuhan tersebut tidak dikomunikasikan secara konsisten', 1),
+(4, 1, 'Tanggung jawab untuk pemilihan investasi TI dan penganggaran TI pada Perusahaan dilakukan secara ad hoc (tidak terorganisir/tanpa perencanaan)', 1),
+(5, 1, 'Perusahaan memiliki implementasi pemilihan investasi TI dan penganggaran TI yang terisolasi dengan dokumen yang informal', 1),
+(6, 1, 'Investasi TI pada Perusahaan dilakukan secara ad hoc (tidak terorganisir/tanpa perencanaan)', 1),
+(7, 1, 'Perusahaan bertindak reaktif dalam investasi TI atau bersifat operasional yang berfokus pada keputusan penganggara', 1),
+(8, 1, 'Perusahaan memiliki koordinasi pengertian secara implisit akan kebutuhan pemilihan investasi TI dan penganggaran TI', 2),
+(9, 1, 'Perusahaan melakukan komunikasi yang baik terkait kebutuhan akan proses pemilihan dan penganggaran investasi TI', 2),
+(10, 1, 'Pemenuhan kebutuhan pemilihan investasi TI dan penganggaran TI pada Perusahaan masih tergantung pada inisiatif individu', 2),
+(11, 1, 'Perusahaan memiliki teknik umum dan standar untuk pengembangan komponen penganggaran TI (infrastruktur, aplikasi dan layanan, sumber daya manusia, dll)\r\n', 2),
+(12, 1, 'Perusahaan bertindak reaktif dan taktis dalam penyetujuan anggaran TI', 2),
+(13, 1, 'Perusahaan memiliki kebijakan dan proses investasi serta penganggaran investasi TI yang terdefinisi, terdokumentasi, dikomunikasikan dengan baik, dan mencakup isu utama bisnis dan teknologi\r\n', 3),
+(14, 1, 'Anggaran TI yang dimiliki oleh Perusahaan telah selaras dengan rencana strategis TI dan rencana bisnis yang dimiliki', 3),
+(15, 1, 'Proses pemilihan dan penganggaran investasi TI pada Perusahaan telah diatur secara formal, terdokumentasi, dan dikomunikasikan dengan baik\r\n', 3),
+(16, 1, 'Pelatihan formal telah diadakan di Perusahaan namun masih berdasarkan pada inisiatif individu', 3),
+(17, 1, 'Perusahaan telah memiliki persetujuan formal dari pemilihan investasi TI dan penganggaran TI', 3),
+(18, 1, 'Anggota staf TI pada Perusahaan memiliki pengalaman dan keterampilan yang dibutuhkan untuk mengembangkan proses penganggaran TI dan merekomendasikan investasi TI yang tepat', 3),
+(19, 1, 'Tanggung jawab dan akuntabilitas terhadap pemilihan dan penganggaran investasi TI pada Perusahaan ditugaskan kepada individu tertentu secara khusus', 4),
+(20, 1, 'Adanya duplikasi anggaran TI pada Perusahaan telah diidentifikasi dan diselesaikan', 4),
+(21, 1, 'Perusahaan memiliki analisa biaya TI secara formal, meliputi biaya langsung maupun tidak langsung serta investasi yang diusulkan, dengan adanya pertimbangan dari semua total biaya selama ini yang sudah dikeluarkan\r\n', 4),
+(22, 1, 'Perusahaan memiliki proses penganggaran TI yang proaktif dan terstandarisasi', 4),
+(23, 1, 'Dampak dari pergeseran biaya dalam pengembangan dan operasional dari hardware dan software untuk proses integrasi sistem dan SDM TI telah ditetapkan dalam perencanaan investasi TI', 4),
+(24, 1, 'Perusahaan telah melakukan perhitungan investasi TI berupa manfaat dan keuntungan secara finansial dan non finansial', 4),
+(25, 1, 'Praktek pelayanan Perusahaan yang baik telah digunakan untuk menghitung biaya dan mengidentifikasi pendekatan untuk meningkatkan efektifitas investasi TI', 5),
+(26, 1, 'Analisa pengembangan teknologi telah dilakukan oleh Perusahaan guna pemilihan investasi TI dan proses penganggaran TI', 5),
+(27, 1, 'Perusahaan secara terus-menerus meningkatkan proses manajemen investasi TI berdasarkan pengalaman dan analisa kinerja investasi TI', 5),
+(28, 1, 'Keputusan investasi TI pada Perusahaan memasukkan harga/sesuai dengan tren peningkatan kinerja', 5),
+(29, 1, 'Pendanaan alternatif pada investasi TI dinilai dan dievaluasi secara formal dalam konteks struktur modal yang ada pada Perusahaan dengan menggunakan metode evaluasi formal', 5),
+(30, 1, 'Perusahaan bertindak proaktif dalam hal identifikasi perbedaan dan variasi', 5),
+(31, 1, 'Analisa biaya dan manfaat yang selama ini telah dikeluarkan oleh Perusahaan masuk ke dalam keputusan investasi', 5),
+(32, 2, 'Perusahaan memiliki kelebihan dalam mengidentifikasi dan mengalokasikan biaya sehubungan dengan layanan informasi disediakan', 0),
+(33, 2, 'Perusahaan menyadari bahwa ada masalah yang harus ditangani sehubungan dengan akuntansi biaya, dan memang tidak ada komunikasi tentang masalah tersebut', 0),
+(34, 2, 'Ada pemahaman umum tentang keseluruhan biaya untuk layanan informasi seperti adanya perincian biaya per pengguna, pelanggan, departemen , kelompok pengguna, fungsi layanan, proyek atau kiriman', 1),
+(35, 2, 'Perusahaan selalu melakukan pemantauan biaya , tidak hanya ada  agregat pelaporan biaya kepada management ', 1),
+(36, 2, 'Apakah biaya TI dialokasikan sebagai pengeluaran operasional ?', 1),
+(37, 2, 'Apakah bisnis ada memberikan informasi tentang biaya atau manfaat dari penyediaan layanan ?', 1),
+(38, 2, ' Apakah Perusahaan memiliki kesadaran keseluruhan akan kebutuhan untuk mengidentifikasi dan mengalokasikan biaya ? ?', 2),
+(39, 2, 'Apakah alokasi biaya didasarkan pada biaya informal atau dasar asumsi, misalnya, biaya perangkat keras, dan selalu ada tautan ke driver nilai ?', 2),
+(40, 2, 'Apakah ada pelatihan atau komunikasi formal yang dilakukan oleh Perusahaan tentang identifikasi biaya standar dan prosedur alokasi ?', 2),
+(41, 2, 'Apakah Perusahaan memberikan tanggung jawab untuk pengumpulan biaya dan alokasi biaya ?', 2),
+(42, 2, 'Apakah Perusahaan melakukan proses alokasi biaya yang berulang  ?', 2),
+(43, 2, 'Apakah Perusahaan menggunakan model biaya layanan informasi yang terdefinisi dan terdokumentasi ?', 3),
+(44, 2, 'Apakah proses untuk menghubungkan biaya TI dengan layanan yang diberikan kepada pengguna didefinisikan oleh manajemen Perusahaan ?', 3),
+(45, 2, 'Apakah Perusahaan memiliki tingkat kesadaran yang tepat mengenai biaya yang dapat distribusikan ke layanan informasi ?', 3),
+(46, 2, 'Apakah Perusahaan memberikan informasi dasar mengenai biaya terkait bisnis ?', 3),
+(47, 2, 'Apakah di Perusahaan , tanggung jawab dan akuntabilitas biaya layanan informasi didefinisikan dan dipahami sepenuhnya di semua tingkatan dan sedang didukung dengan pelatihan formal ?', 4),
+(48, 2, 'Apakah di Perusahaan , biaya langsung dan tidak langsung diidentifikasi dan dilaporkan secara tepat waktu dan otomatis ke pemilik proses bisnis dan pengguna ?', 4),
+(49, 2, 'Jika biaya penyimpangan terdeteksi , apakah Perusahaan melakukan pemantauan dan evaluasi biaya ?', 4),
+(50, 2, 'Apakah pelaporan biaya layanan informasi terkait dengan tujuan bisnis dan SLA dipantau oleh pemilik proses bisnis ?', 4),
+(51, 2, 'Apakah Perusahaan menerapkan fungsi keuangan untuk meninjau kewajaran proses alokasi biaya ?', 4),
+(52, 2, 'Perusahaan menerapkan Sistem akuntansi biaya otomatis , tetapi difokuskan pada fungsi layanan informasi daripada pada proses bisnis ?', 4),
+(53, 2, 'Apakah tujuan dan metrik disepakati untuk pengukuran biaya tetapi diukur secara tidak konsisten ?', 4),
+(54, 2, 'Apakah biaya layanan yang diberikan oleh Perusahaan diidentifikasi, ditangkap, diringkas, dan dilaporkan kepada pemilik proses bisnis  dan pengguna ?', 5),
+(55, 2, 'Apakah biaya yang diidentifikasi sebagai item dikenakan biaya dan dapat mendukung sistem tagihan secara tepat untuk menagih pengguna pada layanan yang diberikan berdasarkan pemanfaatan ?', 5),
+(56, 2, 'Apakah detail biaya sudah mendukung SLA ?', 5),
+(57, 2, 'Apakah pemantauan dan evaluasi biaya layanan digunakan untuk mengoptimalkan biaya sumber daya TI ?', 5),
+(58, 2, 'Apakah angka biaya yang diperoleh digunakan untuk memverifikasi realisasi manfaat dalam proses penganggaran organisasi ?', 5),
+(59, 2, 'Apakah di Perusahaan , pelaporan biaya layanan informasi memberikan peringatan dini tentang perubahan persyaratan bisnis melalui sistem pelaporan cerdas ?', 5),
+(60, 2, 'Apakah variabel model biaya yang digunakan oleh Perusahaan berasal dari volume yang diproses untuk setiap layanan yang disediakan ?', 5),
+(61, 2, 'Apakah manajemen biaya disempurnakan ke tingkat praktik industri, berdasarkan hasil perbaikan berkelanjutan dan pembandingan dengan organisasi lain ?', 5),
+(62, 3, 'Apakah ada kesadaran tentang pentingnya menyelaraskan manajemen SDM TI dengan proses perencanaan teknologi untuk organisasi?', 0),
+(63, 3, 'Apakah ada bagian yang bertanggung jawab mengenai TI pada bagian human resource?', 0),
+(64, 3, 'Apakah menurut anda TI dibutuhkan pada bagian human resource?', 1),
+(65, 3, 'Apakah manajemen SDM dilakukan secara informal dan reaktif?', 1),
+(66, 3, 'Apakah menurut anda proses manjemen SDM TI difokuskan pada perekrutan dan pengelolaan personel?', 1),
+(67, 3, 'Apakah menurut anda dengan perkembangan teknologi sekarang ini dibutuhkan kemampuan dan kompetensi baru?', 1),
+(68, 3, 'Apakah ada niatan dalam mempekerjakan dan mengelola personel TI karena kebutuhan proyek, dibanding oleh karena keseimbangan antara ketersediaan staf internal dan eksternal? ', 2),
+(69, 3, 'Apakah perusahaan mengadakan pelatihan untuk staf baru?', 2),
+(70, 3, 'Apakah manajemen menyadari kebutuhan akan manajemen SDM TI?', 3),
+(71, 3, 'Apakah ada rencana dalam melakukan manajemen SDM TI?', 3),
+(72, 3, 'Apakah ada pendekatan strategis untuk mempekerjakan dan mengelola personel TI?', 3),
+(73, 3, 'Apakah ada rencana pelatihan formal untuk memenuhi kebutuhan SDM TI?', 3),
+(74, 3, 'Apakah ada program rotasi yang dirancang untuk memperluas keterampilan manajemen teknis dan bisnis yang ditetapkan?', 3),
+(75, 3, 'Apakah tanggung jawab untuk pengembangan dan pemeliharaan rencana manajemen SDM TI diberikan kepada individu/kelompok tertentu dengan keahlian dan keterampilan yang diperlukan untuk mengembangkan rencana?', 4),
+(76, 3, 'Apakah proses pengembangan dan pengelolaan rencana manajemen SDM TI responsif terhadap perubahan?', 4),
+(77, 3, 'Apakah ada standarisasi dalam organisasi untuk memungkinkannya mengidentifikasi penyimpangan dari rencana manajemen SDM TI, khususnya pada pengelolaan pertumbuhan dan pergantian personel TI?', 4),
+(78, 3, 'Apakah kompensasi dan tinjauan kinerja dibuat dan dibandingkan dengan organisasi TI lainnya?', 4),
+(79, 3, 'Apakah manajemen SDM TI bersifat proaktif dengan mempertimbangkan pengembangan jalur karier?', 4),
+(80, 3, 'Apakah rencana Manajemen SDM selalu diperbaharui sesuai dengan kebutuhan?', 5),
+(81, 3, 'Apakah perencanaan manajemen SDM terintegrasi dengan teknologi IT?', 5),
+(82, 3, 'Apakah manajemen SDM sejalan dengan arah strategis organisasi?', 5),
+(83, 3, 'Apakah komponen manajemen SDM TI konsisten dengan praktik industri yang baik, seperti kompensasi, tinjauan kinerja, transfer pengetahuan, pelatihan dan pendampingan?', 5),
+(84, 3, 'Apakah program pelatihan dikembangkan berdasarkan semua standar dan produk teknologi baru sebelum diterapkan di organisasi?', 5),
+(85, 4, 'Apakah ada proses pengadaan sumber daya IT yang ditetapkan?', 0),
+(86, 4, 'Apakah Perusahaan menyadari perlunya kebijakan dan prosedur pengadaan yang jelas untuk memastikan bahwa semua sumber daya IT tersedia secara tepat waktu dan hemat biaya?', 0),
+(87, 4, 'Perusahaan menyadari bahwa mereka harus memiliki kebutuhan untuk mendokumentasikan kebijakan dan prosedur yang menghubungkan akuisisi IT dengan proses pengadaan organisasi bisnis secara keseluruhan.', 1),
+(88, 4, 'Kontrak untuk perolehan sumber daya IT dikembangkan dan dikelola oleh manajer proyek dan individu lain yang melaksanakan penilaian profesional mereka daripada sebagai hasil dari prosedur dan kebijakan formal', 1),
+(89, 4, 'Kontrak untuk akuisisi dikelola pada akhir proyek daripada secara berkelanjutan', 1),
+(90, 4, 'Hanya ada hubungan ad hoc antara akuisisi perusahaan dan proses manajemen kontrak dan IT.', 1),
+(91, 4, 'Ada kesadaran organisasi tentang perlunya memiliki kebijakan dan prosedur dasar untuk akuisisi IT', 2),
+(92, 4, 'Kebijakan-kebijakan dan prosedur sudah sebagian terintegrasi dengan proses pengadaan organisasi bisnis secara keseluruhan', 2),
+(93, 4, 'Proses pengadaan sumber daya IT sebagian besar digunakan untuk proyek besar dan terlihat.', 2),
+(94, 4, 'Apakah tanggung jawab dan akuntabilitas untuk pengadaan IT dan manajemen kontrak ditentukan oleh pengalaman masing-masing manajer kontrak?', 2),
+(95, 4, 'Pentingnya manajemen pemasok dan manajemen hubungan diakui tapi ditangani berdasarkan inisiatif individu', 2),
+(96, 4, 'Proses kontrak sebagian besar digunakan oleh proyek-proyek besar atau yang sangat terlihat', 2),
+(97, 4, 'Apakah manajemen telah menerapkan kebijakan dan prosedur untuk akuisisi IT?', 3),
+(98, 4, 'Kebijakan dan prosedur dipandu oleh keseluruhan proses pengadaan organisasi bisnis.', 3),
+(99, 4, 'Apakah ada standar IT untuk perolehan sumber daya IT?', 3),
+(100, 4, 'Pemasok sumber daya IT diintegrasikan ke dalam mekanisme manajemen proyek organisasi dari perspektif manajemen kontrak.', 3),
+(101, 4, 'Apakah sebagian besar sistem pengadaan bisnis terintegrasi dengan akuisisi TI secara keseluruhan?', 3),
+(102, 4, 'Manajemen TI mengkomunikasikan kebutuhan akuisisi yang sesuai serta manajemen kontrak pada seluruh fungsi IT.', 3),
+(103, 4, 'Apakah sistem pengadaan bisnis terintegrasi dengan akuisisi TI secara keseluruhan?', 4),
+(104, 4, 'Standar IT untuk akuisisi sumber daya IT digunakan untuk semua pengadaan.', 4),
+(105, 4, 'Pengukuran pada kontrak dan manajemen pengadaan diambil secara relevan dengan kasus bisnis untuk akuisisi IT.', 4),
+(106, 4, 'Apakah pelaporan aktivitas akuisisi TI yang mendukung tujuan bisnis telah tersedia?', 4),
+(107, 4, 'Apakah manajemen mengetahui pengecualian terhadap kebijakan serta prosedur akuisisi IT?', 4),
+(108, 4, 'Manajemen strategis hubungan sedang berkembang.', 4),
+(109, 4, 'Apakah Perusahaan melakukan manajemen TI dengan menggunakan manajemen kontrak dan proses akuisisi untuk semua akuisisi dengan memonitor pengukuran kinerja?', 4),
+(110, 4, 'Manajemen menjadikan lembaga dengan menyusun sumber daya dengan melakukan dengan cara menyeluruh untuk akuisisi TI.', 5),
+(111, 4, 'Manajemen telah menetapkan kesesuaian terhadap kebijakan dan metode akuisisi TI yang harus dipatuhi.', 5),
+(112, 4, 'Evaluasi pada kontrak dan manajemen penyusunan diambil yang berguna dengan kasus bisnis untuk akuisisi TI.', 5),
+(113, 4, 'Koneksi yang sehat akan menjadikan waktu dengan kebanyakan penyalur dan mitra, dan koneksi yang baik dengan cara diukur dan dipantau', 5),
+(114, 4, 'Koneksi yang dikelola atau direncanakan secara strategis?', 5),
+(115, 4, 'Taraf kebijakan dan prosedur IT untuk akuisisi dilakukan dengan cara strategis dan melakukan pengukuran proses.', 5),
+(116, 4, 'Apakah manajemen IT menghubungkan kepentingan dengan cara strategis dari akuisisi yang sesuai dan manajemen kontrak yang ada di seluruh fungsi IT?', 5),
+(117, 5, 'Perusahaan belum memiliki perencanaan Quality Management System (QMS) dan metodologi System Development Life Cycle (SDLC)', 0),
+(118, 5, 'Manajemen Perusahaan tidak menyadari bahwa kualitas dari layanan Perusahaan sangat penting', 0),
+(119, 5, 'Manajemen membuat penilaian terkait layanan di Perusahaan secara informal untuk mengukur kualitas ', 1),
+(120, 5, 'Apakah aktivitas Quality Management System (QMS) pada Perusahaan berfokus pada IT-project dan process oriented?', 2),
+(121, 5, 'Adanya program atau aplikasi yang digunakan untuk memonitor aktivitas Quality Management System (QMS) pada manajemen Perusahaan', 2),
+(122, 5, 'Apakah proses Quality Management System (QMS) dikomunikasikan kepada perusahaan oleh manajemen dengan mengikutsertakan manajemen IT dan manajemen end-user?', 3),
+(123, 5, 'Adanya kegiatan edukasi dan pelatihan untuk staff dan karyawan Perusahaan terkait kualitas layanan yang diberikan', 3),
+(124, 5, 'Apakah ada ekspetasi kualitas dasar yang didefinisikan dan digunakan di berbagai proyek pada organisasi IT?', 3),
+(125, 5, 'Apakah ada perencanaan dan pelaksanaan survey terkait kepuasan kualitas layanan di Perusahaan?', 3),
+(126, 5, 'Alat maupun pelatihan yang menunjang sistem manajemen kualitas sudah dimunculkan (diputuskan)', 3),
+(127, 5, 'Suvery mengenai kepuasan terhadap kualitas layanan Perusahaan sudah direncanakan', 3),
+(128, 5, 'Perusahaan memiliki standar mengenai kualitas layanan', 4),
+(129, 5, 'Apakah survey kualitas kepuasan dijalankan secara konsisten?', 4),
+(130, 5, 'apakah proses benchmarking dengan kompetitor sudah mulai dilakukan?', 4),
+(131, 5, 'Apakah IT management menjadi dasar pengetahuan dari metriks kualitas?', 4),
+(132, 5, 'Apakah proses analisis akar permasalahan (root cause analysis) diaplikasikan secara berkala?', 4),
+(133, 5, 'Sistem manajemen kualitas (QMS) sudah diterapkan pada setiap aktivitas maupun proses bisnis di Perusahaan', 5),
+(134, 5, 'Sistem manajemen kualitas (QMS) yang diterapkan sudah fleksibel dan mudah beradaptasi dengan perubahan lingkungan di Perusahaan', 5),
+(135, 5, 'Perusahaan telah rutin mengadakan proses brenchmarking dengan program pendidikan diluar (kompetitor Perusahaan)', 5),
+(136, 5, 'Proses manajemen mutu Perusahaan sudah sesuai standar dan spesifikasi', 5),
+(137, 6, 'Manajemen proses terhadap perubahan tidak terdefinisi sama sekali serta segala perubahan dapat dilakukan tanpa kontrol.', 0),
+(138, 6, 'Tidak ada kesadaran terhadap bagaimana sebuah perubahan dapat berdampak negatif bagi perusahaan terutama terhadap operasi bisnis dan teknologi informasi.', 0),
+(139, 6, 'Tidak ada kesadaran terhadap bagaimana sebuah manajemen perubahan yang baik dapat berdampak positif juga untuk perusahaan.', 0),
+(140, 6, 'Perusahaan mengetahui bahwa setiap perubahan yang ada harus dikelola dan diawasi', 1),
+(141, 6, 'Terdapat keberagaman bidang urusan pada Perusahaan yang memungkinkan terjadinya perubahan yang tidak terkelola atau tidak sah. ', 1),
+(142, 6, 'Dokumentasi dari perubahan yang pernah terjadi di Perusahaan relatif sedikit atau tidak ada dan konfigurasi cenderung tidak lengkap dan tidak dapat dipercaya. ', 1),
+(143, 6, 'Kesalahan sering terjadi karena buruknya manajemen perubahan yang ada.', 1),
+(144, 6, 'Terdapat proses manajemen perubahan secara informal namun belum tersrtruktur, mendasar dan cenderung terjadi kesalahan.', 2),
+(145, 6, 'Konfigurasi dari akurasi dokumentasi masih inkonsisten dan perencanaan serta perhitungan dampak terhadap perubahan masih terbatas.', 2),
+(146, 6, 'Terdapat proses manajemen perubahan formal yang baik yang mencakup kategorisasi, prioritasisasi, prosedur-prosedur darurat, autorisasi perubahan dan manajemen pelepasan yang sesuai dengan perkembangan Perusahaan.', 3),
+(147, 6, 'Kesalahan dan perubahan-perubahan tak terkelola masih terjadi.', 3),
+(148, 6, 'Analisis dampak perubahan IT pada operasi bisnis mulai dibentuk untuk mendukung perencanaan teknologi dan aplikasi baru.', 3),
+(149, 6, 'Proses manajemen perubahan dikembangkan dengan baik dan secara konsisten diikuti untuk segala perubahan yang ada. ', 4),
+(150, 6, 'Proses berjalan dengan efisien dan efektif tetapi tetap bersandar pada prosedur manual dan kontrol untuk memastikan bahwa mutu tercapai.', 4),
+(151, 6, 'Proses persetujuan untuk perubahan sudah sesuai aturan.', 4),
+(152, 6, 'Dokumentasi manajemen perubahan dibuat dengan tepat dan umumnya akurat.', 4),
+(153, 6, 'Perencanaan menejemen perubahan IT  menjadi terintegrasi dengan perubahan dalam proses bisnis untuk menjamin training, perubahan organisasi dan persoalan kelancaran bisnis terkelola.', 4),
+(154, 6, 'Terdapat peningkatan koordinasi antara manajemen perubahan IT dan perancangan proses bisnis baru.', 4),
+(155, 6, 'Terdapat proses yang konsisten untuk mengawasi mutu dan kinerja proses manajemen perubahan Perusahaan.', 4),
+(156, 6, 'Proses manajemen perubahan dilakukan secara teratur, ditinjau dan diperbaharui untuk tertap sejalan dengan visi dan misi Perusahaan.', 5),
+(157, 6, 'Informasi konfigurasi sudah berbasis komputer dan menyediakan version control.', 5),
+(158, 6, 'Manajemen perubahan IT terintegrasi dengan manajemen perubahan bisnis untuk memastikan bahwa IT adalah aspek penting dalam peningkatan produktivitas dan penciptaan kesempatan bisnis baru bagi Perusahaan.', 5),
+(159, 6, 'Terdapat Dokumentasi konfigurasi yang akurat.', 5),
+(160, 7, 'Manajemen menyadari pentingnya proses untuk menentukan level dari layanan (Service Level) Perusahaan', 0),
+(161, 7, 'Adanya pihak yang bertanggung jawab untuk memonitor level dari layanan Perusahaan', 0),
+(162, 7, 'Proses dalam mengatur level dari layanan Perusahaan bersifat informal dan reaktif', 1),
+(163, 7, 'Adanya pihak yang bertanggung jawab untuk menentukan dan menegelola layanan Perusahaan', 1),
+(164, 7, 'Pengukuran performa layanan Perusahaan hanya bersifat kualitatif dengan tujuan yang tidak tepat/jelas', 1),
+(165, 7, 'Pelaporan mengenai level dari layanan Perusahaan bersifat tidak formal, jarang dilakukan dan tidak konsisten  ', 1),
+(166, 7, 'Level layanan dari Perusahaan bersifat informal dan tidak di-review', 2),
+(167, 7, 'Pelaporan level layanan Perusahaan tidak lengkap dan ada kemungkinan tidak relevan atau membuat salah paham pengguna', 2),
+(168, 7, 'Pelaporan level layanan Perusahaan bergantung kepada kemampuan dan inisiatif dari masing-masing manager', 2),
+(169, 7, 'Wewenang dari koordinator level layanan Perusahaan terbatas', 2),
+(170, 7, 'Penyusunan Service Level Agreement (SLA) bersifat sukarela dan tidak ada pemaksaan', 2),
+(171, 7, 'Tanggung jawab dari koordinator level layanan jelas, dan wewenang sesuai kebijakan dari koordinator sendiri', 3),
+(172, 7, 'Proses pengembangan Service Level Agreement (SLA) sudah ada dengan adanya checkpoint  untuk menilai kembali level layanan dan kepuasan pengguna', 3),
+(173, 7, 'Adanya dokumentasi dari layanan dan level layanan, dan disetujui dengan proses yang standard', 3),
+(174, 7, 'Prosedur untuk mengatasi kekurangan dari level layanan bersifat informal', 3),
+(175, 7, 'Adanya keterkaitan yang jelas antara ekspektasi pencapaian level layanan Perusahaan dan biaya yang tersedia', 3),
+(176, 7, 'Level layanan Perusahaan telah disetujui namun belum memenuhi kebutuhan bisnis Perusahaan', 3),
+(177, 7, 'Level layanan Perusahaan ditentukan pada fase penentuan kebutuhan sistem dan tergabung pada desain aplikasi dan lingkungan operasional', 4),
+(178, 7, 'Kepuasan pelanggan diukur dan dinilai secara rutin', 4),
+(179, 7, 'Pengukuran performa lebih mencerminkan kebutuhan pengguna daripada tujuan IT', 4),
+(180, 7, 'Ukuran dari penilaian level layanan sudah terstandarisasi dan merefleksikan norma industri', 4),
+(181, 7, 'Kriteria untuk penentuan level layanan berdasarkan pada ketersediaan, keandalan, performa, kapasitas pertumbuhan, dukungan pengguna, perencanaan berkelanjutan dan pertimbangan keamanan', 4),
+(182, 7, 'Root Cause Analysis (RCA) rutin dilakukan ketika level layanan tidak memenuhi', 4),
+(183, 7, 'Proses pelaporan untuk memonitor level layanan lebih terotomasi', 4),
+(184, 7, 'Resiko operasional dan keuangan berhubungan dengan level layanan yang disetujui tidak memuaskan', 4),
+(185, 7, 'Sistem formal untuk pengukuran level layanan bersifat legal dan selalu di-maintain', 4),
+(186, 7, 'Level layanan dievaluasi berkelanjutan untuk memastikan tetap selaras dengan tujuan IT dan bisnis, sembari mengambil keuntungan dari teknologi, termasuk ratio cost-benefit', 5),
+(187, 7, 'Semua proses manajemen level layanan dapat dilakukan pengembangan berkelanjutan', 5),
+(188, 7, 'Kepuasan pengguna dimonitor dan dikelola secara berkelanjutan', 5),
+(189, 7, 'Ekspektasi dari level layanan merefleksikan strategi tujuan dari bisnis dan dievaluasi sesuai norma industri', 5),
+(190, 7, 'Management IT memiliki sumber daya dan tanggung jawab untuk memenuhi target level layanan, dan kompensasi untuk memenuhi target ini bersifat terstruktur', 5),
+(191, 7, 'Manajemen senior memonitor matriks performa sebagai bagian dari proses pengembangan berkelanjutan', 5),
+(192, 8, 'Apakah Perusahaan memiliki peraturan/ketetapan/SOP yang mendefinisikan tanggung jawab dan akuntabilitas dalam menjalankan proses IT?', 0),
+(193, 8, 'Apakah Perusahaan memiliki kebijakan dan prosedur dalam melakukan kontrak dengan pihak ketiga?', 0),
+(194, 8, 'Apakah ada proses review dan persetujuan dari manajemen terkait layanan dari pihak ketiga?', 0),
+(195, 8, 'Apakah ada aktivitas pengukuran dari Perusahaan atau laporan yang diberikan oleh pihak ketiga untuk memantau kinerja pihak ketiga?', 0),
+(196, 8, 'Apakah manajemen senior Perusahaan peduli terhadap kualitas dari layanan yang diberikan oleh pihak ketiga?', 0),
+(197, 8, 'Apakah manajemen Perusahaan sadar dan peduli tentang perlunya kebijakan dan prosedur tertulis untuk memanajemen pihak ketiga, termasuk kontrak bertanda tangan?', 1),
+(198, 8, 'Apakah Perusahaan memiliki istilah standar dalam perjanjian dengan penyedia layanan?', 1),
+(199, 8, 'Apakah Perusahaan memiliki metode pengukuran yang formal terhadap layanan yang diberikan?', 1),
+(200, 8, 'Apakah Perusahaan memiliki guideline terhadap pelaksanaan layanan yang dilakukan oleh pihak ketiga?', 1),
+(201, 8, 'Apakah ada proses pengawasan formal dari Perusahaan terhadap penyedia layanan pihak ketiga, risiko terkait, dan pelaksanaan layanan?', 2),
+(202, 8, 'Apakah Perusahaan menggunakan dokumen formal yang ditandatangai dengan menggunakan istilah – istilah standar dalam menjalin Kerjasama dengan pihak ketiga?', 2),
+(203, 8, 'Apakah laporan terkait layanan yang diberikan mendukung objektif bisnis?', 2),
+(204, 8, 'Apakah Perusahaan memiliki prosedur yang terdokumentasi dengan baik untuk mengatur layanan pihak ketiga, dengan proses yang jelas untuk pemeriksaan dan negosiasi dengan penyedia layanan?', 3),
+(205, 8, 'Apakah ketika kesepakatan untuk penyediaan layanan dibuat, hubungan dengan pihak ketiga adalah murni kontrak?', 3),
+(206, 8, 'Apakah sifat layanan yang akan diberikan dirinci dalam kontrak dan mencakup, hukum, operasional, dan kontrol?', 3),
+(207, 8, 'Apakah di Perusahaan ada bagian yang diberi tanggungjawab untuk mengawasi layanan dari pihak ketiga?', 3),
+(208, 8, 'Apakah Perusahaan memiliki susunan standar untuk menyusun persyaratan kontrak?', 3),
+(209, 8, 'Apakah risiko bisnis yang terkait dengan layanan pihak ketiga dinilai dan dilaporkan?', 3),
+(210, 8, 'Apakah Perusahaan menetapkan kriteria formal dan standar untuk mendefinisikan ketentuan perjanjian, termasuk ruang lingkup pekerjaan, layanan yang akan disediakan, asumsi, jadwal, biaya, pengaturan penagihan dan tanggung jawab?', 4),
+(211, 8, 'Apakah Perusahaan menetapkan tanggung jawab untuk kontrak dan manajemen pihak ketiga?', 4),
+(212, 8, 'Apakah Kualifikasi, risiko, dan kemampuan pihak ketiga diverifikasi secara berkelanjutan?', 4),
+(213, 8, 'Apakah persyaratan layanan ditentukan dan dikaitkan dengan tujuan bisnis?', 4),
+(214, 8, 'Apakah Perusahaan memiliki proses untuk meninjau kinerja layanan terhadap persyaratan kontrak, memberikan masukan untuk menilai layanan pihak ketiga saat ini dan di masa mendatang?', 4),
+(215, 8, 'Apakah Perusahaan menggunakan model harga transfer dalam proses pengadaan?', 4),
+(216, 8, 'Apakah semua pihak yang terlibat sadar akan layanan, biaya, dan ekspektasi pencapaian?', 4),
+(217, 8, 'Apakah ada tujuan dan metrik yang disepakati untuk pengawasan penyedia layanan?', 4),
+(218, 8, 'Apakah kontrak yang ditandatangani dengan pihak ketiga ditinjau secara berkala pada interval yang telah ditentukan sebelumnya?', 5),
+(219, 8, 'Apakah bukti kepatuhan kontrak terhadap ketentuan operasional, hukum dan control dipantau, dan tindakan korektif diberlakukan?', 5),
+(220, 8, 'Apakah pihak ketiga tunduk pada tinjauan berkala independent oleh Perusahaan, dan umpan balik atas kinerja disediakan dan digunakan untuk meningkatkan pemberian layanan?', 5),
+(221, 8, 'Apakah pengukuran kinerja dapat bervariasi dalam menanggapi kondisi bisnis yang berubah?', 5),
+(222, 8, 'Apakah Perusahaan memiliki tindakan yang mendukung deteksi dini masalah potensial dengan layanan pihak ketiga?', 5),
+(223, 8, 'Apakah ada pelaporan pencapaian tingkat layanan yang komprehensif dan terdefinisi terkait dengan kepuasan terhadap pihak ketiga?', 5),
+(224, 8, 'Apakah manajemen Perusahaan dapat menyesuaikan proses akuisisi dan pemantauan layanan pihak ketiga berdasarkan pengukur kinerja?', 5),
+(225, 9, 'Terdapat pelatihan atau program edukasi', 0),
+(226, 9, 'Ada pembahasan internal tentang pentingnya pelatihan dan program edukasi staff', 0),
+(227, 9, 'memiliki jadwal pelatihan dan program edukasi yang terlaksana dengan baik', 1),
+(228, 9, 'terdapat absensi terkait dengan pelatihan dan program edukasi yang dilaksanakan', 1),
+(229, 9, 'apakah pelatihan yang dilaksanakan mengandung aspek etika, kesiagaan sistem keamanan dan keamanan pelatihan', 1),
+(230, 9, 'apakah pelatihan yang dilaksanakan mengandung aspek etika, kesiagaan sistem keamaan dan keaman pelatihan', 1),
+(231, 9, 'manajemen menyadari akan pentingnya pelatihan dan program edukasi yang terasosiasi dengan baik', 2),
+(232, 9, 'apakah performa tiap individu dipengaruhi oleh adanya pelatihan?', 2),
+(233, 9, 'dalam pelatihan terdapat instruktur berbeda ataupun instruktur yang sama akan tetapi memiliki pendekatan berbeda tiap subjek', 2),
+(234, 9, 'masing-masing staff memiliki kepercayaan terhadap pengetahuannya. Serta dapat menyelesaikan masalah yang ada.', 2),
+(235, 9, 'pelatihan dan program edukasi memiliki dasar hukum pada lembaga terkait', 3),
+(236, 9, 'budget, sumber daya, fasilitas sudah ditetapkan untuk mendukung keperluan pelatihan', 3),
+(237, 9, 'karyawan dan manajer mengidentifikasi dokumen untuk perluan pelatihan', 3),
+(238, 9, 'adanya kelas formal terkait kesadaran pentingnya keaamanan sistem', 3),
+(239, 9, 'manajemen memantau proses pelatihan dan program edukasi', 3),
+(240, 9, 'apakah analisis masalah dalam pelatihan dan pendidikan sudah diterapkan', 3),
+(241, 9, 'pelatihan dan program edukasi memiliki hasil yang dapat di ukur', 4),
+(242, 9, 'memiliki tanggung jawab yang jelas', 4),
+(243, 9, 'pelatihan dan pendidikan merupakan jalur kerja karyawan', 4),
+(244, 9, 'semua karyawan menjalankan kode etik tentang pentingnya keamanan sistem', 4),
+(245, 9, 'karyawan mendapatakan pelatihan tentang keamanan sistem yang sesuai untuk mengihindari adanya kegagalan yang berpengaruh terhadap integritas', 4),
+(246, 9, 'management memantau kebutuhan peserta dengan mereview dan mengupgrade proses pelatihan', 4),
+(247, 9, 'apakah program pelatihan saat ini sedang  diperbaiki dan menerapkan program internal?', 4),
+(248, 9, 'hasil pelatihan dapat meningkatkan kemampuan tiap individu ', 5),
+(249, 9, 'pelatihan dan program edukasi adalah komponen penting dalam karir karyawan', 5),
+(250, 9, 'apakah budget, resource, fasilitas dan instruktur dapat dipenuhi dengan baik?', 5),
+(251, 9, 'apakah proses pelatihan selalu mengalami pengembangan?', 5),
+(252, 9, 'setiap masalah selalu diselesaikan sampai ke akarnya dan menggunakan langkah yang efisien untuk menganggulanginya', 5),
+(253, 9, 'mengedepankan attitude yang postif', 5),
+(254, 9, 'penggunanaan pelatihan eksternal sebagai panduan', 5),
+(255, 9, 'pelatihan dan program pendidikan menggunakan IT yang terintegrasi', 5),
+(256, 10, 'Perusahaan belum memiliki pelayanan yang berguna untuk mengatasi masalah dan keluhan dari pelanggan maupun staff.', 0),
+(257, 10, 'Terdapat kekurangan yang fatal terkait manajemen resiko pada Perusahaan.', 0),
+(258, 10, 'Pihak manajemen Perusahaan mengetahui bahwa proses yang didukung oleh alat dan personel diperlukan untuk menanggapi permintaan pengguna dan untuk pengelolaan masalah.', 1),
+(259, 10, 'Tidak adanya proses standar untuk mengatasi permasalahan, hanya disediakan dukungan reaktif.', 1),
+(260, 10, 'Tidak adanya peninjauan queri, insiden, atau tren pengguna.', 1),
+(261, 10, 'Tidak ada proses eskalasi untuk memastikan bahwa masalah teratasi.', 1),
+(262, 10, 'Ada kesadaran dari pihak manajemen Perusahaan akan kebutuhan dari meja layanan (service desk) dan proses manajemen insiden.', 2),
+(263, 10, 'Bantuan hanya tersedia secara informal melalui staff manajemen yang memiliki pengetahuan terkait insiden yang terjadi.', 2),
+(264, 10, 'Tidak adanya pelatihan dan komunikasi terkait prosedur standar, tanggung jawab diserahkan kepada individu.', 2),
+(265, 10, 'Kebutuhan kan fungsi meja layanan dan proses manajemen resiko diakui dan diterima.', 3),
+(266, 10, 'Adanya kegiatan edukasi dan pelatihan untuk staff dan karyawan Perusahaan terkait kualitas layanan yang diberikan', 3),
+(267, 10, 'Adanya pengembangan terkait pedoman dan FAQ (pertanyaan yang sering diajukan oleh staff/mahasiswa Perusahaan)', 3),
+(268, 10, 'Waktu tanggapan terkait masalah yang muncul tidak terukur dan mungkin belum terselesaikan', 3),
+(269, 10, 'Pengguna/staff Perusahaan telah menerima komunikasi yang jelas tentang di mana dan bagaimana melaporkan masalah dan insiden.', 3),
+(270, 10, 'Ada pemahaman penuh terkait manfaat dari proses manajemen insiden di semua tingkat organisasi manajemen Perusahaan, dan fungsi meja layanan ditetapkan di setiap level organisasi.', 4),
+(271, 10, 'Terdapat alat atau sistem terpusat untuk menangani masalah yang terjadi.', 4),
+(272, 10, 'Staff manajemen dan staff meja layanan saling terhubung dan berinteraksi. Tanggung jawab keduanya juga jelas dan terpantau.', 4),
+(273, 10, 'Staff meja layanan dilatih, dan proses ditingkatkan melalui penggunaan software atau sistem.', 4),
+(274, 10, 'Terdapat pengembangan metrik untuk kinerja meja layanan.', 4),
+(275, 10, 'Proses manajemen insiden dan fungsi meja layanan telah didirikan dan diatur dengan baik dan berorientasi pada layanan pelanggan dengan menjadi berpengatuhan luas, berfokus pada pelanggan, dan berguna.', 5),
+(276, 10, 'Terdapat alat atau sistem yang memungkinkan staff maupun pengguna Perusahaan mendiagnosis dan menyelesaikan insiden dengan sendirinya.', 5),
+(277, 10, 'Metrik diukur dan dilaporkan secara sistematis', 5),
+(278, 10, 'manajemen menggunakan sistem terintegrasi untuk melihat statistik kinerja dari proses manajemen insdiden dan fungsi meja layanan.', 5),
+(279, 10, 'Proses telah disempurnakan ke tingkat praktik industri terbaik, berdasarkan hasil analisis indikator kinerja, peningkatan berkelanjutan, dan pembandingan dengan organisasi lain (dilakukan benchmark dengan kompetitor Perusahaan)', 5),
+(280, 11, 'Apakah Perusahaan mengetahui perbedaan dari masalah dan kecelakaan yang ada?', 0),
+(281, 11, 'Apakah Perusahaan mengidentifikasi sumber utama masalah yang sedang terjadi?', 0),
+(282, 11, 'Apakah Perusahaan sudah menyadari tentang pentingnya untuk mengelola masalah yang ada?', 0),
+(283, 11, 'Apakah personel Perusahaan sudah menyadari masalah apa saja yang sedang terjadi?', 1),
+(284, 11, 'Apakah personel Perusahaan sudah memberikan informasi dan memberikan bantuan tentang masalah yang sedang terjadi pada bidang masing-masing?', 1),
+(285, 11, 'Apakah Personel Perusahaan sudah bertanggung jawab pada pengelolaan masalah yang sedang terjadi pada bidangnya masing-masing?', 1),
+(286, 11, 'Apakah pengelolaan masalah oleh personel Perusahaan sudah didiskusikan bersama-sama?', 1),
+(287, 11, 'Apakah Perusahaan sudah mulai menyadari tentang pentingnya mengelola masalah yang ada?', 1),
+(288, 11, 'Apakah Perusahaan sudah menyadari manfaat dari pengelolaan masalah pada unit bisnis maupun layanan informasi Perusahaan?', 2),
+(289, 11, 'Apakah personel Perusahaan sudah bertanggung jawab pada pengelolaan masalah yang sedang terjadi pada bidangnya masing-masing?', 2),
+(290, 11, 'Apakah masalah sudah di informasikan kepada para personel dan anggota Perusahaan?', 2),
+(291, 11, 'Apakah komunitas sudah diberikan informasi tentang masalah yang sedang terjadi?', 2),
+(292, 11, 'Apakah sistem pengelolaan masalah sudah terintegrasi dan dibuktikan oleh management support?', 3),
+(293, 11, 'Apakah sistem pengelolaan masalah telah dilakukan secara efektif?', 3),
+(294, 11, 'Apakah dana untuk melakukan pelatihan kepada personel dan anggota sudah tersedia?', 3),
+(295, 11, 'Apakah pengelolaan masalah dan proses eskalasi pada Perusahaan sudah memiliki standar?', 3),
+(296, 11, 'Apakah pendeteksian masalah sudah dilakukan secara bersama-sama dengan personel dan anggota?', 3),
+(297, 11, 'Apakah pencarian soluso sudah dilakukan secara bersama-sama dengan personel dan anggota?', 3),
+(298, 11, 'Apakah informasi masalah yang dinformasikan kepada para personel dan anggota Perusahaan sudah disebar luaskan dengan cara yang sopan dan formal?', 3),
+(299, 11, 'Apakah review masalah oleh personel Perusahaan sudah dilakukan secara massal?', 3),
+(300, 11, 'Apakah seluruh personel Perusahaan sudah mengerti tentang cara pengelolaan masalah yang sedang terjadi?', 4),
+(301, 11, 'Apakah tanggung jawab terhadap pengelolaan masalah sudah ditetapkan dengan jelas?', 4),
+(302, 11, 'Apakah kepemilikan bidang pengelolaan masalah sudah ditetapkan dengan jelas?', 4),
+(303, 11, 'Apakah metode dan prosedur pengelolaan masalah sudah didokumentasikan dan diinformasikan kepada seluruh personel Perusahaan?', 4),
+(304, 11, 'Apakah metode dan prosedur pengelolaan masalah sudah dibuat seefektif mungkin?', 4),
+(305, 11, 'Apakah masalah yang dominan pada Perusahaan sudah diidentifikasi dan dicatat?', 4),
+(306, 11, 'Apakah masalah yang dominan pada Perusahaan sudah di laporkan dan diberikan solusinya?', 4),
+(307, 11, 'Apakah pengelolaan masalah yang dilakukan Perusahaan dapat meningkatkan layanan IT Perusahaan?', 4),
+(308, 11, 'Apakah tujuan pengeolaan masalah yang sedang terjadi pada Perusahaan sudah ditetapkan dengan jelas?', 4),
+(309, 11, 'Apakah pengelolaan masalah yang sedang terjadi pada Perusahaan sudah memiliki sifat looking forward dan proactive?', 5),
+(310, 11, 'Apakah masalah pada Perusahaan sudah dicegah dan terantisipasi sebelumnya?', 5),
+(311, 11, 'Apakah Perusahaan sudah belajar dari masalah yang sudah ada dan berkembang dari masalah tersebut?', 5),
+(312, 11, 'Apakah sistem Perusahaan sudah memiliki pendeteksi masalah otomatis jika ada masalah yang tiba-tiba muncul?', 5),
+(313, 12, 'Apakah Perusahaan menyediakan waktu dan sumber daya untuk membentuk dukungan IT dasar dan kegiatan operasi?', 0),
+(314, 12, 'Apakah Perusahaan menyadari akan kebutuhan penataan struktur dukungan IT?', 0),
+(315, 12, 'Apakah beberapa prosedur standar yang ditetapkan, dan kegiatan operasi bersifat reaktif?', 1),
+(316, 12, 'Mayoritas proses operasional informal dijadwalkan, dan pemrosesan permintaan diterima tanpa validasi sebelumnya.', 1),
+(317, 12, 'Komputer, sistem dan aplikasi yang mendukung proses bisnis yang sering terganggu, tertunda dan tidak tersedia.', 1),
+(318, 12, 'Berapa banyak waktu yang terbuang disaat karyawan menunggu sumber daya?', 1),
+(319, 12, 'Organisasi menyadari peran kunci yang kegiatan operasional TI dalam menyediakan fungsi dukungan IT.', 2),
+(320, 12, 'Anggaran untuk alat-alat dialokasikan pada kasus-per kasus.', 2),
+(321, 12, 'Mendukung operasi TI informal dan intuitif.', 2),
+(322, 12, 'Ada ketergantungan yang tinggi pada keterampilan dan kemampuan individu.', 2),
+(323, 12, 'Adanya instruksi yang mencakup apa yang harus dilakukan, kapan dan dalam urutan apa tidak didokumentasikan.', 2),
+(324, 12, 'Beberapa operator ada pelatihan, dan ada beberapa standar operasional formal.', 2),
+(325, 12, 'Kebutuhan manajemen operasi komputer dipahami dan diterima dalam organisasi.', 3),
+(326, 12, 'Sumber daya yang dialokasikan dan adanya beberapa pelatihan on-the-job.', 3),
+(327, 12, 'Fungsi berulang secara resmi ditetapkan, standar, didokumentasikan dan dikomunikasikan', 3),
+(328, 12, 'Adanya acara dan hasil tugas selesai dicatat, dengan pelaporan manajemen terbatas.', 3),
+(329, 12, 'Penggunaan penjadwalan otomatis dan alat lainnya diperkenalkan untuk membatasi intervensi operator.', 3),
+(330, 12, 'Kontrol diperkenalkan untuk operasi penempatan pekerjaan baru.', 3),
+(331, 12, 'Sebuah kebijakan resmi dikembangkan untuk mengurangi jumlah peristiwa terjadwal.', 3),
+(332, 12, 'Perjanjian pemeliharaan dan layanan dengan vendor masih informal atau alami.', 3),
+(333, 12, 'Adanya operasi komputer dan tanggung jawab dukungan yang jelas dan kepemilikan tugas.', 4),
+(334, 12, 'Adanya operasi yang didukung melalui anggaran sumber daya untuk belanja modal dan sumber daya manusia.', 4),
+(335, 12, 'Apakah ada pelatihan formal dan berkelanjutan?', 4),
+(336, 12, 'Jadwal dan tugas yang didokumentasikan dan dikomunikasikan, baik secara internal ke fungsi TI dan pelanggan bisnis.', 4),
+(337, 12, 'Adanya pengukur dan pemantau kegiatan sehari-hari dengan perjanjian kinerja standar dan tingkat layanan yang ditetapkan.', 4),
+(338, 12, 'Apakah setiap penyimpangan dapat cepat ditangani dan diperbaiki?', 4),
+(339, 12, 'Manajemen memonitor penggunaan sumber daya komputasi dan penyelesaian pekerjaan atau tugas yang diberikan.', 4),
+(340, 12, 'Upaya berkesinambungan ada untuk meningkatkan tingkat otomatisasi proses sebagai sarana perbaikan terus-menerus.', 4),
+(341, 12, 'Perjanjian pemeliharaan dan layanan formal didirikan dengan vendor.', 4),
+(342, 12, 'Adanya keselarasan penuh dengan masalah, kapasitas dan proses manajemen ketersediaan, didukung oleh analisis penyebab kegagalan.', 4),
+(343, 12, 'Perusahaan mendukung operasi IT yang efektif, efisien & cukup fleksibel untuk memenuhi tingkat kebutuhan layanan produktivitas minimal hilang.', 5),
+(344, 12, 'Proses manajemen operasional IT Perusahaan yang standar dan didokumentasikan dalam basis pengetahuan dan peningkatan kepatuhan terus menerus.', 5),
+(345, 12, 'Proses otomatis yang mendukung sistem beroperasi mulus dan berkontribusi pada lingkungan Perusahaan yang stabil.', 5),
+(346, 12, 'Proses otomatis yang mendukung sistem beroperasi mulus dan berkontribusi pada lingkungan Perusahaan yang stabil.', 5),
+(347, 12, 'Pertemuan rutin dengan manajemen perubahan memastikan masuknya tepat waktu dengan perubahan jadwal produksi.', 5),
+(348, 12, 'Dalam kerjasama dengan vendor, peralatan dianalisis untuk usia dan gejala kerusakan, dan pemeliharaan terutama pencegahan natural.', 5),
+(349, 13, 'Manajemen menyadari bahwa proses bisnis utama mungkin memerlukan kinerja tingkat tinggi dari TI atau bahwa kebutuhan bisnis secara keseluruhan untuk layanan TI dapat melebihi kapasitas.', 0),
+(350, 13, 'Ada proses perencanaan kapasitas.', 0),
+(351, 13, 'Pengguna mencari solusi untuk kendala kinerja.', 1),
+(352, 13, 'Ada apresiasi atas kebutuhan akan kapasitas dan perencanaan kinerja oleh para pemilik proses bisnis.', 1),
+(353, 13, 'Tindakan yang diambil untuk mengelola kinerja dan kapasitas biasanya bersifat reaktif.', 1),
+(354, 13, 'Proses perencanaan kapasitas dan kinerja bersifat informal.', 1),
+(355, 13, 'Pemahaman tentang kapasitas dan kinerja sumber daya TI terbatas.', 1),
+(356, 13, 'Manajemen bisnis dan TI menyadari dampak dari tidak terkelolanya kinerja dan kapasitas.', 2),
+(357, 13, 'Kebutuhan kinerja umumnya dipenuhi berdasarkan penilaian sistem individu dan pengetahuan dukungan dan tim proyek.', 2),
+(358, 13, 'Alat individu dapat digunakan untuk mendiagnosis masalah kinerja dan kapasitas, tetapi konsistensi hasil tetap bergantung pada keahlian individu.', 2),
+(359, 13, 'Ada penilaian keseluruhan dari kemampuan kinerja TI atau pertimbangan berdasarkan situasi peak dan worst-case.', 2),
+(360, 13, 'Masalah ketersediaan kemungkinan besar terjadi dengan cara tidak terduga dan random, serta membutuhkan waktu yang cukup lama untuk didiagnosis dan dikoreksi.', 2),
+(361, 13, 'Setiap pengukuran kinerja didasarkan terutama pada kebutuhan TI dan bukan pada kebutuhan pelanggan.', 2),
+(362, 13, 'Persyaratan kinerja dan kapasitas ditentukan di sepanjang siklus hidup sistem.', 3),
+(363, 13, 'Ada persyaratan dan metrik tingkat layanan yang dapat digunakan untuk mengukur kinerja operasional.', 3),
+(364, 13, 'Persyaratan kinerja dan kapasitas di masa mendatang dimodelkan mengikuti proses yang ditentukan.', 3),
+(365, 13, 'Laporan dibuat dengan memberikan statistik kinerja.', 3),
+(366, 13, 'Akuisisi TI sebagian besar terintegrasi dengan sistem pengadaan bisnis secara keseluruhan.', 3),
+(367, 13, 'Masalah terkait kinerja dan kapasitas masih mungkin terjadi dan memakan waktu untuk memperbaikinya.', 3),
+(368, 13, 'Meskipun tingkat layanan dipublikasikan, pengguna dan pelanggan mungkin masih merasa skeptis tentang kemampuan layanan.', 3),
+(369, 13, 'Ada proses dan alat yang tersedia untuk mengukur penggunaan sistem, kinerja dan kapasitas, dan hasil dibandingkan dengan tujuan yang ditentukan.', 4),
+(370, 13, 'Tersedia informasi terkini yang memberikan statistik kinerja standar dan memperingatkan insiden yang disebabkan oleh kinerja dan kapasitas yang tidak memadai.', 4),
+(371, 13, 'Masalah kinerja dan kapasitas yang tidak memadai ditangani sesuai dengan prosedur yang ditetapkan dan sesuai standar.', 4),
+(372, 13, 'Alat otomatis digunakan untuk memantau sumber daya tertentu, seperti ruang disk, jaringan, server, dan gateway jaringan.', 4),
+(373, 13, 'AStatistik kinerja dan kapasitas dilaporkan dalam istilah proses bisnis, sehingga pengguna dan pelanggan memahami tingkat layanan TI.', 4),
+(374, 13, 'Pengguna secara umum merasa puas dengan kemampuan layanan saat ini dan mungkin menuntut tingkat ketersediaan yang baru dan lebih baik.', 4),
+(375, 13, 'AMetrik untuk mengukur kinerja dan kapasitas TI yang telah disepakati mungkin diterapkan secara tidak konsisten.', 4),
+(376, 13, 'Rencana kinerja dan kapasitas sepenuhnya disinkronkan dengan perkiraan permintaan bisnis..', 5),
+(377, 13, 'Infrastruktur TI dan permintaan bisnis didasarkan pada tinjauan rutin untuk memastikan bahwa kapasitas optimal dicapai dengan biaya serendah mungkin.', 5),
+(378, 13, 'Alat untuk memantau sumber daya TI penting distandarisasi dan digunakan di seluruh platform dan dihubungkan ke sistem manajemen insiden di seluruh organisasi.', 5),
+(379, 13, 'Alat pemantauan mendeteksi dan secara otomatis dapat memperbaiki masalah terkait kinerja dan kapasitas.', 5),
+(380, 13, 'Analisis tren dilakukan untuk menunjukkan masalah kinerja apa yang akan segera terjadi yang disebabkan oleh peningkatan volume bisnis, sehingga memungkinkan perencanaan dan penghindaran masalah yang tidak terduga.', 5),
+(381, 13, 'Metrik untuk mengukur kinerja dan kapasitas TI telah disesuaikan dengan hasil dan indikator kinerja untuk semua proses bisnis yang penting dan diukur secara konsisten.', 5),
+(382, 13, 'Manajemen menyesuaikan perencanaan kinerja dan kapasitas setelah melakukan analisis atas tindakan-tindakan yang dilakukan.', 5);
+
+INSERT INTO `stakeholder` (`id`, `jabatan_stakeholder`) VALUES
+(1, 'CFO'),
+(2, 'Business Executive'),
+(3, 'CIO'),
+(4, 'Head IT Administration'),
+(5, 'Head Operations'),
+(6, 'Chief Architect'),
+(7, 'Head Development'),
+(8, 'PMO'),
+(9, 'CEO'),
+(10, 'Business Process Owner'),
+(11, 'Deployment Team'),
+(12, 'Training Department'),
+(13, 'Service Manager'),
+(14, 'Service Desk/Incident Manager'),
+(15, 'Problem Manager');
+
+INSERT INTO `stakeholder_it_process` (`id_stakeholder`, `id_it_process`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(4, 2),
+(5, 3),
+(6, 3),
+(7, 3),
+(4, 3),
+(8, 3),
+(9, 4),
+(5, 4),
+(7, 4),
+(4, 4),
+(8, 4),
+(3, 5),
+(10, 6),
+(5, 6),
+(7, 6),
+(11, 6),
+(12, 6),
+(5, 7),
+(7, 7),
+(4, 7),
+(13, 7),
+(3, 8),
+(5, 8),
+(7, 8),
+(4, 8),
+(3, 9),
+(10, 9),
+(12, 9),
+(5, 10),
+(6, 10),
+(7, 10),
+(14, 10),
+(5, 11),
+(6, 11),
+(7, 11),
+(8, 11),
+(15, 11),
+(5, 12),
+(5, 13),
+(7, 13);
