@@ -153,7 +153,7 @@
             {
                 var reportElement = "";
                 reportElement += `<p>Maturity model : <span class="maturity-value">${maturityValue}</span></p>`;
-                reportElement += `<p>Level yang anda saat ini: <span class="current-maturity-level">${currentLevel}</span></p>`;
+                reportElement += `<p>Level anda saat ini: <span class="current-maturity-level">${currentLevel}</span></p>`;
                 reportElement += `<p>Level yang anda inginkan: <span>${levelWanted}</span></p>`;
                 reportElement += `<p>Selisih nilai maturyity saat ini dengan yang akan datang adalah: <span class="selisih-maturity">${selisihMaturity}</span></p>`;
                 reportElement += `<p>Pertanyaan yang dijawab dengan jawaban tidak sama sekali: </p>`;
@@ -173,7 +173,7 @@
                 }
                 reportElement += `</ul>`;
 
-                reportElement += `<p>Pertanyaan yang dijawab dengan jawaban biasa: </p>`;
+                reportElement += `<p>Pertanyaan yang dijawab dengan jawaban hampir: </p>`;
                 reportElement += `<ul>`;
                 for(i = 0; i < jawaban2.length; i++)
                 {
