@@ -1,17 +1,17 @@
 INSERT INTO stakeholder(`jabatan_stakeholder`)
 VALUES 
-  1  ('CFO'), 
-  2  ('Business Executive'), 
-  3  ('CIO'), 
-  4  ('Head IT Administration'),
-  5 ('Head Operations'),
-  6 ('Chief Architect'),
-  7 ('Head Development'),
-  8 ('PMO'),
-  9 ('CEO'),
-  10 ('Business Process Owner'),
-  11 ('Deployment Team'),
-  12 ('Training Department');
+  ('CFO'), 
+  ('Business Executive'), 
+  ('CIO'), 
+  ('Head IT Administration'),
+  ('Head Operations'),
+  ('Chief Architect'),
+  ('Head Development'),
+  ('PMO'),
+  ('CEO'),
+  ('Business Process Owner'),
+  ('Deployment Team'),
+  ('Training Department');
 
 INSERT INTO `business_goals`(`id`,`business_goals`)
 VALUES 
