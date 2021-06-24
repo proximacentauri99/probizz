@@ -51,7 +51,7 @@ VALUES
     (4,3),
     (4,23);
 
-INSERT INTO `it_goals_process`(`id_it_goals`, `id_it_process`)
+INSERT INTO `it_goal_process`(`id_it_goal`, `id_it_process`)
 VALUES
     (24,1),
     (24,2),
