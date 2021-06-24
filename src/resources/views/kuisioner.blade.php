@@ -363,6 +363,7 @@
 
                 var maturityValue = (normalCompliance0 * 0) + (normalCompliance1 * 1) + (normalCompliance2 * 2) + (normalCompliance3 * 3) + (normalCompliance4 * 4) + (normalCompliance5 * 5);
 
+                if(isNaN(maturityValue)) return false;
                 console.log(maturityValue);
                 return [maturityValue, jawaban0, jawaban1, jawaban2, jawaban3];
             }
@@ -420,6 +421,8 @@
                 if(result == false)
                 {
                     console.log("jumlah pertanyaan tidak sama");
+                    $('.hasil').empty();
+                    $('.hasil').append('<span> Silahkan lengkapi survey terlebih dahulu. </span>');
                 } else {
                     var maturityValue = result[0];
                     console.log("maturitynya adalah: " + maturityValue);

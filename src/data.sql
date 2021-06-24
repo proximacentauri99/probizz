@@ -4,17 +4,33 @@ INSERT INTO `business_goals` (`id`, `business_goals`) VALUES
 (4, 'Improve customer orientation and service'),
 (17, 'Acquire and maintain skilled and motivated people');
 
-INSERT INTO `business_it_goals` (`id_business_goals`, `id_it_goal`) VALUES
-(1, 24),
-(17, 9),
-(4, 3),
-(4, 23);
-
 INSERT INTO `it_goals` (`id`, `it_goals`) VALUES
 (3, 'Ensure satisfaction of end users with service offerings and service levels'),
 (9, 'Acquire and maintain IT skills that respond to the IT strategy'),
 (23, 'Make sure that IT services are available as required'),
 (24, "Improve IT's cost-efficiency and its contribution to business profitability");
+
+INSERT INTO `it_process` (`id`, `kode`, `it_process`) VALUES
+(1, 'PO5', 'Manage the IT Investment'),
+(2, 'DS6', 'Identify and Allocate Costs'),
+(3, 'PO7', 'Manage IT Human Resources'),
+(4, 'AI5', 'Procure IT Resources'),
+(5, 'PO8', 'Manage Quality'),
+(6, 'AI4', 'Enable Operation and Use'),
+(7, 'DS1', 'Define and Manage Service Levels'),
+(8, 'DS2', 'Manage Third-Party Services'),
+(9, 'DS7', 'Educate and Train Users'),
+(10, 'DS8', 'Manage Service Desk and Incidents'),
+(11, 'DS10', 'Manage Problems'),
+(12, 'DS13', 'Manage Operations'),
+(13, 'DS3', 'Manage Performance and Capacity'),
+(14, 'DS4', 'Ensure Continous Service');
+
+INSERT INTO `business_it_goals` (`id_business_goals`, `id_it_goal`) VALUES
+(1, 24),
+(17, 9),
+(4, 3),
+(4, 23);
 
 INSERT INTO `it_goal_process` (`id_it_goal`, `id_it_process`) VALUES
 (24, 1),
@@ -33,22 +49,6 @@ INSERT INTO `it_goal_process` (`id_it_goal`, `id_it_process`) VALUES
 (23, 14),
 (23, 10),
 (23, 12);
-
-INSERT INTO `it_process` (`id`, `kode`, `it_process`) VALUES
-(1, 'PO5', 'Manage the IT Investment'),
-(2, 'DS6', 'Identify and Allocate Costs'),
-(3, 'PO7', 'Manage IT Human Resources'),
-(4, 'AI5', 'Procure IT Resources'),
-(5, 'PO8', 'Manage Quality'),
-(6, 'AI4', 'Enable Operation and Use'),
-(7, 'DS1', 'Define and Manage Service Levels'),
-(8, 'DS2', 'Manage Third-Party Services'),
-(9, 'DS7', 'Educate and Train Users'),
-(10, 'DS8', 'Manage Service Desk and Incidents'),
-(11, 'DS10', 'Manage Problems'),
-(12, 'DS13', 'Manage Operations'),
-(13, 'DS3', 'Manage Performance and Capacity'),
-(14, 'DS4', 'Ensure Continous Service');
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (121, '2014_10_12_000000_create_users_table', 1),

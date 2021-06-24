@@ -9,6 +9,8 @@ class Stakeholder extends Model
 {
     use HasFactory;
 
+    protected $table = 'stakeholder';
+
     protected $fillable = [
         'jabatan_stakeholder'
     ];
