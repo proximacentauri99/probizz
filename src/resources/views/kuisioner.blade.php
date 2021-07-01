@@ -11,8 +11,25 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" type="text/css">
 
+	<!-- FONT -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="container d-flex align-items-center min-vh-100">
+        <div class="row g-0 justify-content-center">
+            <!-- TITLE -->
+            <div class="col-lg-4 offset-lg-1 mx-0 px-0">
+                <div id="title-container">
+                    <img class="covid-image" src="{{ asset('img/working.png')}}">
+                    <h2>Probizz</h2>
+                    <h3>Survey Maturity Level</h3>
+                    <p>Sebuah platform untuk menentukan maturity level sebuah badan, lembaga atau perusahaan yang menekankan pada output stakeholder masing-masing</p>
+                </div>
+            </div>
+            <!-- FORMS -->
+            <div class="col-lg-7 mx-0 px-0">
+                <div id="qbox-container">
     <div class="level0">
         <h2>Level0</h2>
         @php $counter = 1; @endphp
@@ -447,6 +464,10 @@
         });
 
     </script>
+</div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
